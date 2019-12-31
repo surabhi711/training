@@ -1,0 +1,923 @@
+SQL> select sysdate, current_time from dual;
+select sysdate, current_time from dual
+                *
+ERROR at line 1:
+ORA-00904: "CURRENT_TIME": invalid identifier 
+
+
+Elapsed: 00:00:00.02
+SQL> select sysdate, current_timestamp from dual;
+
+SYSDATE                                                                         
+---------                                                                       
+CURRENT_TIMESTAMP                                                               
+---------------------------------------------------------------------------     
+30-DEC-19                                                                       
+30-DEC-19 04.56.50.764000 PM +05:30                                             
+                                                                                
+
+Elapsed: 00:00:00.03
+SQL> select sysdate, current_date from dual;
+
+SYSDATE   CURRENT_D                                                             
+--------- ---------                                                             
+30-DEC-19 30-DEC-19                                                             
+
+Elapsed: 00:00:00.01
+SQL> alter session set TIME_ZONE='-5:0';
+
+Session altered.
+
+Elapsed: 00:00:00.04
+SQL> select sysdate, current_timestamp, current_date from dual;
+
+SYSDATE                                                                         
+---------                                                                       
+CURRENT_TIMESTAMP                                                               
+---------------------------------------------------------------------------     
+CURRENT_D                                                                       
+---------                                                                       
+30-DEC-19                                                                       
+30-DEC-19 06.28.30.415000 AM -05:00                                             
+30-DEC-19                                                                       
+                                                                                
+
+Elapsed: 00:00:00.04
+SQL> alter session set TIME_ZONE='+05:30';
+
+Session altered.
+
+Elapsed: 00:00:00.00
+SQL> select sysdate, current_timestamp, current_date from dual;
+
+SYSDATE                                                                         
+---------                                                                       
+CURRENT_TIMESTAMP                                                               
+---------------------------------------------------------------------------     
+CURRENT_D                                                                       
+---------                                                                       
+30-DEC-19                                                                       
+30-DEC-19 04.59.11.525000 PM +05:30                                             
+30-DEC-19                                                                       
+                                                                                
+
+Elapsed: 00:00:00.04
+SQL> select sysdate+1, sysdate-2 from dual;
+
+SYSDATE+1 SYSDATE-2                                                             
+--------- ---------                                                             
+31-DEC-19 28-DEC-19                                                             
+
+Elapsed: 00:00:00.01
+SQL> select sysdate+(1/24), sysdate-2 from dual;
+
+SYSDATE+( SYSDATE-2                                                             
+--------- ---------                                                             
+30-DEC-19 28-DEC-19                                                             
+
+Elapsed: 00:00:00.01
+SQL> select sysdate-to_date('09-nov-2019') from dual;
+
+SYSDATE-TO_DATE('09-NOV-2019')                                                  
+------------------------------                                                  
+                     51.710081                                                  
+
+Elapsed: 00:00:00.01
+SQL> select last_name, hire_date from employeesl
+  2  select last_name, hire_date from employees;
+select last_name, hire_date from employees
+*
+ERROR at line 2:
+ORA-00933: SQL command not properly ended 
+
+
+Elapsed: 00:00:00.02
+SQL> select last_name, hire_date from employees ;
+
+LAST_NAME                 HIRE_DATE                                             
+------------------------- ---------                                             
+King                      17-JUN-03                                             
+Kochhar                   21-SEP-05                                             
+De Haan                   13-JAN-01                                             
+Hunold                    03-JAN-06                                             
+Ernst                     21-MAY-07                                             
+Austin                    25-JUN-05                                             
+Pataballa                 05-FEB-06                                             
+Lorentz                   07-FEB-07                                             
+Greenberg                 17-AUG-02                                             
+Faviet                    16-AUG-02                                             
+Chen                      28-SEP-05                                             
+
+LAST_NAME                 HIRE_DATE                                             
+------------------------- ---------                                             
+Sciarra                   30-SEP-05                                             
+Urman                     07-MAR-06                                             
+Popp                      07-DEC-07                                             
+Raphaely                  07-DEC-02                                             
+Khoo                      18-MAY-03                                             
+Baida                     24-DEC-05                                             
+Tobias                    24-JUL-05                                             
+Himuro                    15-NOV-06                                             
+Colmenares                10-AUG-07                                             
+Weiss                     18-JUL-04                                             
+Fripp                     10-APR-05                                             
+
+LAST_NAME                 HIRE_DATE                                             
+------------------------- ---------                                             
+Kaufling                  01-MAY-03                                             
+Vollman                   10-OCT-05                                             
+Mourgos                   16-NOV-07                                             
+Nayer                     16-JUL-05                                             
+Mikkilineni               28-SEP-06                                             
+Landry                    14-JAN-07                                             
+Markle                    08-MAR-08                                             
+Bissot                    20-AUG-05                                             
+Atkinson                  30-OCT-05                                             
+Marlow                    16-FEB-05                                             
+Olson                     10-APR-07                                             
+
+LAST_NAME                 HIRE_DATE                                             
+------------------------- ---------                                             
+Mallin                    14-JUN-04                                             
+Rogers                    26-AUG-06                                             
+Gee                       12-DEC-07                                             
+Philtanker                06-FEB-08                                             
+Ladwig                    14-JUL-03                                             
+Stiles                    26-OCT-05                                             
+Seo                       12-FEB-06                                             
+Patel                     06-APR-06                                             
+Rajs                      17-OCT-03                                             
+Davies                    29-JAN-05                                             
+Matos                     15-MAR-06                                             
+
+LAST_NAME                 HIRE_DATE                                             
+------------------------- ---------                                             
+Vargas                    09-JUL-06                                             
+Russell                   01-OCT-04                                             
+Partners                  05-JAN-05                                             
+Errazuriz                 10-MAR-05                                             
+Cambrault                 15-OCT-07                                             
+Zlotkey                   29-JAN-08                                             
+Tucker                    30-JAN-05                                             
+Bernstein                 24-MAR-05                                             
+Hall                      20-AUG-05                                             
+Olsen                     30-MAR-06                                             
+Cambrault                 09-DEC-06                                             
+
+LAST_NAME                 HIRE_DATE                                             
+------------------------- ---------                                             
+Tuvault                   23-NOV-07                                             
+King                      30-JAN-04                                             
+Sully                     04-MAR-04                                             
+McEwen                    01-AUG-04                                             
+Smith                     10-MAR-05                                             
+Doran                     15-DEC-05                                             
+Sewall                    03-NOV-06                                             
+Vishney                   11-NOV-05                                             
+Greene                    19-MAR-07                                             
+Marvins                   24-JAN-08                                             
+Lee                       23-FEB-08                                             
+
+LAST_NAME                 HIRE_DATE                                             
+------------------------- ---------                                             
+Ande                      24-MAR-08                                             
+Banda                     21-APR-08                                             
+Ozer                      11-MAR-05                                             
+Bloom                     23-MAR-06                                             
+Fox                       24-JAN-06                                             
+Smith                     23-FEB-07                                             
+Bates                     24-MAR-07                                             
+Kumar                     21-APR-08                                             
+Abel                      11-MAY-04                                             
+Hutton                    19-MAR-05                                             
+Taylor                    24-MAR-06                                             
+
+LAST_NAME                 HIRE_DATE                                             
+------------------------- ---------                                             
+Livingston                23-APR-06                                             
+Grant                     24-MAY-07                                             
+Johnson                   04-JAN-08                                             
+Taylor                    24-JAN-06                                             
+Fleaur                    23-FEB-06                                             
+Sullivan                  21-JUN-07                                             
+Geoni                     03-FEB-08                                             
+Sarchand                  27-JAN-04                                             
+Bull                      20-FEB-05                                             
+Dellinger                 24-JUN-06                                             
+Cabrio                    07-FEB-07                                             
+
+LAST_NAME                 HIRE_DATE                                             
+------------------------- ---------                                             
+Chung                     14-JUN-05                                             
+Dilly                     13-AUG-05                                             
+Gates                     11-JUL-06                                             
+Perkins                   19-DEC-07                                             
+Bell                      04-FEB-04                                             
+Everett                   03-MAR-05                                             
+McCain                    01-JUL-06                                             
+Jones                     17-MAR-07                                             
+Walsh                     24-APR-06                                             
+Feeney                    23-MAY-06                                             
+OConnell                  21-JUN-07                                             
+
+LAST_NAME                 HIRE_DATE                                             
+------------------------- ---------                                             
+Grant                     13-JAN-08                                             
+Whalen                    17-SEP-03                                             
+Hartstein                 17-FEB-04                                             
+Fay                       17-AUG-05                                             
+Mavris                    07-JUN-02                                             
+Baer                      07-JUN-02                                             
+Higgins                   07-JUN-02                                             
+Gietz                     07-JUN-02                                             
+
+107 rows selected.
+
+Elapsed: 00:00:00.52
+SQL> select last_name, hire_date,(sysdate-hire_date)/7 from employees ;
+
+LAST_NAME                 HIRE_DATE (SYSDATE-HIRE_DATE)/7                       
+------------------------- --------- ---------------------                       
+King                      17-JUN-03            862.958757                       
+Kochhar                   21-SEP-05            744.815899                       
+De Haan                   13-JAN-01            989.387328                       
+Hunold                    03-JAN-06            729.958757                       
+Ernst                     21-MAY-07            658.101614                       
+Austin                    25-JUN-05            757.387328                       
+Pataballa                 05-FEB-06            725.244471                       
+Lorentz                   07-FEB-07            672.815899                       
+Greenberg                 17-AUG-02            906.387328                       
+Faviet                    16-AUG-02            906.530185                       
+Chen                      28-SEP-05            743.815899                       
+
+LAST_NAME                 HIRE_DATE (SYSDATE-HIRE_DATE)/7                       
+------------------------- --------- ---------------------                       
+Sciarra                   30-SEP-05            743.530185                       
+Urman                     07-MAR-06            720.958757                       
+Popp                      07-DEC-07            629.530185                       
+Raphaely                  07-DEC-02            890.387328                       
+Khoo                      18-MAY-03            867.244471                       
+Baida                     24-DEC-05            731.387328                       
+Tobias                    24-JUL-05            753.244471                       
+Himuro                    15-NOV-06            684.815899                       
+Colmenares                10-AUG-07            646.530185                       
+Weiss                     18-JUL-04            806.244471                       
+Fripp                     10-APR-05            768.244471                       
+
+LAST_NAME                 HIRE_DATE (SYSDATE-HIRE_DATE)/7                       
+------------------------- --------- ---------------------                       
+Kaufling                  01-MAY-03            869.673042                       
+Vollman                   10-OCT-05            742.101614                       
+Mourgos                   16-NOV-07            632.530185                       
+Nayer                     16-JUL-05            754.387328                       
+Mikkilineni               28-SEP-06            691.673042                       
+Landry                    14-JAN-07            676.244471                       
+Markle                    08-MAR-08            616.387328                       
+Bissot                    20-AUG-05            749.387328                       
+Atkinson                  30-OCT-05            739.244471                       
+Marlow                    16-FEB-05            775.815899                       
+Olson                     10-APR-07            663.958757                       
+
+LAST_NAME                 HIRE_DATE (SYSDATE-HIRE_DATE)/7                       
+------------------------- --------- ---------------------                       
+Mallin                    14-JUN-04            811.101614                       
+Rogers                    26-AUG-06            696.387328                       
+Gee                       12-DEC-07            628.815899                       
+Philtanker                06-FEB-08            620.815899                       
+Ladwig                    14-JUL-03            859.101614                       
+Stiles                    26-OCT-05            739.815899                       
+Seo                       12-FEB-06            724.244471                       
+Patel                     06-APR-06            716.673042                       
+Rajs                      17-OCT-03            845.530185                       
+Davies                    29-JAN-05            778.387328                       
+Matos                     15-MAR-06            719.815899                       
+
+LAST_NAME                 HIRE_DATE (SYSDATE-HIRE_DATE)/7                       
+------------------------- --------- ---------------------                       
+Vargas                    09-JUL-06            703.244471                       
+Russell                   01-OCT-04            795.530185                       
+Partners                  05-JAN-05            781.815899                       
+Errazuriz                 10-MAR-05            772.673042                       
+Cambrault                 15-OCT-07            637.101614                       
+Zlotkey                   29-JAN-08            621.958757                       
+Tucker                    30-JAN-05            778.244471                       
+Bernstein                 24-MAR-05            770.673042                       
+Hall                      20-AUG-05            749.387328                       
+Olsen                     30-MAR-06            717.673042                       
+Cambrault                 09-DEC-06            681.387328                       
+
+LAST_NAME                 HIRE_DATE (SYSDATE-HIRE_DATE)/7                       
+------------------------- --------- ---------------------                       
+Tuvault                   23-NOV-07            631.530185                       
+King                      30-JAN-04            830.530185                       
+Sully                     04-MAR-04            825.673042                       
+McEwen                    01-AUG-04            804.244471                       
+Smith                     10-MAR-05            772.673042                       
+Doran                     15-DEC-05            732.673042                       
+Sewall                    03-NOV-06            686.530185                       
+Vishney                   11-NOV-05            737.530185                       
+Greene                    19-MAR-07            667.101614                       
+Marvins                   24-JAN-08            622.673042                       
+Lee                       23-FEB-08            618.387328                       
+
+LAST_NAME                 HIRE_DATE (SYSDATE-HIRE_DATE)/7                       
+------------------------- --------- ---------------------                       
+Ande                      24-MAR-08            614.101614                       
+Banda                     21-APR-08            610.101614                       
+Ozer                      11-MAR-05            772.530185                       
+Bloom                     23-MAR-06            718.673042                       
+Fox                       24-JAN-06            726.958757                       
+Smith                     23-FEB-07            670.530185                       
+Bates                     24-MAR-07            666.387328                       
+Kumar                     21-APR-08            610.101614                       
+Abel                      11-MAY-04            815.958757                       
+Hutton                    19-MAR-05            771.387328                       
+Taylor                    24-MAR-06            718.530185                       
+
+LAST_NAME                 HIRE_DATE (SYSDATE-HIRE_DATE)/7                       
+------------------------- --------- ---------------------                       
+Livingston                23-APR-06            714.244471                       
+Grant                     24-MAY-07            657.673042                       
+Johnson                   04-JAN-08            625.530185                       
+Taylor                    24-JAN-06            726.958757                       
+Fleaur                    23-FEB-06            722.673042                       
+Sullivan                  21-JUN-07            653.673042                       
+Geoni                     03-FEB-08            621.244471                       
+Sarchand                  27-JAN-04            830.958757                       
+Bull                      20-FEB-05            775.244471                       
+Dellinger                 24-JUN-06            705.387328                       
+Cabrio                    07-FEB-07            672.815899                       
+
+LAST_NAME                 HIRE_DATE (SYSDATE-HIRE_DATE)/7                       
+------------------------- --------- ---------------------                       
+Chung                     14-JUN-05            758.958757                       
+Dilly                     13-AUG-05            750.387328                       
+Gates                     11-JUL-06            702.958757                       
+Perkins                   19-DEC-07            627.815899                       
+Bell                      04-FEB-04            829.815899                       
+Everett                   03-MAR-05            773.673042                       
+McCain                    01-JUL-06            704.387328                       
+Jones                     17-MAR-07            667.387328                       
+Walsh                     24-APR-06            714.101614                       
+Feeney                    23-MAY-06            709.958757                       
+OConnell                  21-JUN-07            653.673042                       
+
+LAST_NAME                 HIRE_DATE (SYSDATE-HIRE_DATE)/7                       
+------------------------- --------- ---------------------                       
+Grant                     13-JAN-08            624.244471                       
+Whalen                    17-SEP-03            849.815899                       
+Hartstein                 17-FEB-04            827.958757                       
+Fay                       17-AUG-05            749.815899                       
+Mavris                    07-JUN-02            916.530185                       
+Baer                      07-JUN-02            916.530185                       
+Higgins                   07-JUN-02            916.530185                       
+Gietz                     07-JUN-02            916.530185                       
+
+107 rows selected.
+
+Elapsed: 00:00:00.51
+SQL> select last_name, hire_date,round((sysdate-hire_date)/7) "Weeks" from employees ;
+
+LAST_NAME                 HIRE_DATE      Weeks                                  
+------------------------- --------- ----------                                  
+King                      17-JUN-03        863                                  
+Kochhar                   21-SEP-05        745                                  
+De Haan                   13-JAN-01        989                                  
+Hunold                    03-JAN-06        730                                  
+Ernst                     21-MAY-07        658                                  
+Austin                    25-JUN-05        757                                  
+Pataballa                 05-FEB-06        725                                  
+Lorentz                   07-FEB-07        673                                  
+Greenberg                 17-AUG-02        906                                  
+Faviet                    16-AUG-02        907                                  
+Chen                      28-SEP-05        744                                  
+
+LAST_NAME                 HIRE_DATE      Weeks                                  
+------------------------- --------- ----------                                  
+Sciarra                   30-SEP-05        744                                  
+Urman                     07-MAR-06        721                                  
+Popp                      07-DEC-07        630                                  
+Raphaely                  07-DEC-02        890                                  
+Khoo                      18-MAY-03        867                                  
+Baida                     24-DEC-05        731                                  
+Tobias                    24-JUL-05        753                                  
+Himuro                    15-NOV-06        685                                  
+Colmenares                10-AUG-07        647                                  
+Weiss                     18-JUL-04        806                                  
+Fripp                     10-APR-05        768                                  
+
+LAST_NAME                 HIRE_DATE      Weeks                                  
+------------------------- --------- ----------                                  
+Kaufling                  01-MAY-03        870                                  
+Vollman                   10-OCT-05        742                                  
+Mourgos                   16-NOV-07        633                                  
+Nayer                     16-JUL-05        754                                  
+Mikkilineni               28-SEP-06        692                                  
+Landry                    14-JAN-07        676                                  
+Markle                    08-MAR-08        616                                  
+Bissot                    20-AUG-05        749                                  
+Atkinson                  30-OCT-05        739                                  
+Marlow                    16-FEB-05        776                                  
+Olson                     10-APR-07        664                                  
+
+LAST_NAME                 HIRE_DATE      Weeks                                  
+------------------------- --------- ----------                                  
+Mallin                    14-JUN-04        811                                  
+Rogers                    26-AUG-06        696                                  
+Gee                       12-DEC-07        629                                  
+Philtanker                06-FEB-08        621                                  
+Ladwig                    14-JUL-03        859                                  
+Stiles                    26-OCT-05        740                                  
+Seo                       12-FEB-06        724                                  
+Patel                     06-APR-06        717                                  
+Rajs                      17-OCT-03        846                                  
+Davies                    29-JAN-05        778                                  
+Matos                     15-MAR-06        720                                  
+
+LAST_NAME                 HIRE_DATE      Weeks                                  
+------------------------- --------- ----------                                  
+Vargas                    09-JUL-06        703                                  
+Russell                   01-OCT-04        796                                  
+Partners                  05-JAN-05        782                                  
+Errazuriz                 10-MAR-05        773                                  
+Cambrault                 15-OCT-07        637                                  
+Zlotkey                   29-JAN-08        622                                  
+Tucker                    30-JAN-05        778                                  
+Bernstein                 24-MAR-05        771                                  
+Hall                      20-AUG-05        749                                  
+Olsen                     30-MAR-06        718                                  
+Cambrault                 09-DEC-06        681                                  
+
+LAST_NAME                 HIRE_DATE      Weeks                                  
+------------------------- --------- ----------                                  
+Tuvault                   23-NOV-07        632                                  
+King                      30-JAN-04        831                                  
+Sully                     04-MAR-04        826                                  
+McEwen                    01-AUG-04        804                                  
+Smith                     10-MAR-05        773                                  
+Doran                     15-DEC-05        733                                  
+Sewall                    03-NOV-06        687                                  
+Vishney                   11-NOV-05        738                                  
+Greene                    19-MAR-07        667                                  
+Marvins                   24-JAN-08        623                                  
+Lee                       23-FEB-08        618                                  
+
+LAST_NAME                 HIRE_DATE      Weeks                                  
+------------------------- --------- ----------                                  
+Ande                      24-MAR-08        614                                  
+Banda                     21-APR-08        610                                  
+Ozer                      11-MAR-05        773                                  
+Bloom                     23-MAR-06        719                                  
+Fox                       24-JAN-06        727                                  
+Smith                     23-FEB-07        671                                  
+Bates                     24-MAR-07        666                                  
+Kumar                     21-APR-08        610                                  
+Abel                      11-MAY-04        816                                  
+Hutton                    19-MAR-05        771                                  
+Taylor                    24-MAR-06        719                                  
+
+LAST_NAME                 HIRE_DATE      Weeks                                  
+------------------------- --------- ----------                                  
+Livingston                23-APR-06        714                                  
+Grant                     24-MAY-07        658                                  
+Johnson                   04-JAN-08        626                                  
+Taylor                    24-JAN-06        727                                  
+Fleaur                    23-FEB-06        723                                  
+Sullivan                  21-JUN-07        654                                  
+Geoni                     03-FEB-08        621                                  
+Sarchand                  27-JAN-04        831                                  
+Bull                      20-FEB-05        775                                  
+Dellinger                 24-JUN-06        705                                  
+Cabrio                    07-FEB-07        673                                  
+
+LAST_NAME                 HIRE_DATE      Weeks                                  
+------------------------- --------- ----------                                  
+Chung                     14-JUN-05        759                                  
+Dilly                     13-AUG-05        750                                  
+Gates                     11-JUL-06        703                                  
+Perkins                   19-DEC-07        628                                  
+Bell                      04-FEB-04        830                                  
+Everett                   03-MAR-05        774                                  
+McCain                    01-JUL-06        704                                  
+Jones                     17-MAR-07        667                                  
+Walsh                     24-APR-06        714                                  
+Feeney                    23-MAY-06        710                                  
+OConnell                  21-JUN-07        654                                  
+
+LAST_NAME                 HIRE_DATE      Weeks                                  
+------------------------- --------- ----------                                  
+Grant                     13-JAN-08        624                                  
+Whalen                    17-SEP-03        850                                  
+Hartstein                 17-FEB-04        828                                  
+Fay                       17-AUG-05        750                                  
+Mavris                    07-JUN-02        917                                  
+Baer                      07-JUN-02        917                                  
+Higgins                   07-JUN-02        917                                  
+Gietz                     07-JUN-02        917                                  
+
+107 rows selected.
+
+Elapsed: 00:00:00.52
+SQL> select months_between(sysdate,'09-dec-2018') from employees;
+
+MONTHS_BETWEEN(SYSDATE,'09-DEC-2018')                                           
+-------------------------------------                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+
+MONTHS_BETWEEN(SYSDATE,'09-DEC-2018')                                           
+-------------------------------------                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+
+MONTHS_BETWEEN(SYSDATE,'09-DEC-2018')                                           
+-------------------------------------                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+
+MONTHS_BETWEEN(SYSDATE,'09-DEC-2018')                                           
+-------------------------------------                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+
+MONTHS_BETWEEN(SYSDATE,'09-DEC-2018')                                           
+-------------------------------------                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+
+MONTHS_BETWEEN(SYSDATE,'09-DEC-2018')                                           
+-------------------------------------                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+
+MONTHS_BETWEEN(SYSDATE,'09-DEC-2018')                                           
+-------------------------------------                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+
+MONTHS_BETWEEN(SYSDATE,'09-DEC-2018')                                           
+-------------------------------------                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+
+MONTHS_BETWEEN(SYSDATE,'09-DEC-2018')                                           
+-------------------------------------                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+
+MONTHS_BETWEEN(SYSDATE,'09-DEC-2018')                                           
+-------------------------------------                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+                            12.700417                                           
+
+107 rows selected.
+
+Elapsed: 00:00:00.54
+SQL> select months_between(sysdate,'09-dec-2018') from dual;
+
+MONTHS_BETWEEN(SYSDATE,'09-DEC-2018')                                           
+-------------------------------------                                           
+                           12.7004241                                           
+
+Elapsed: 00:00:00.01
+SQL> select add_months(sysdate,5) from dual;
+
+ADD_MONTH                                                                       
+---------                                                                       
+30-MAY-20                                                                       
+
+Elapsed: 00:00:00.01
+SQL> select last_date(sysdate) from dual;
+select last_date(sysdate) from dual
+       *
+ERROR at line 1:
+ORA-00904: "LAST_DATE": invalid identifier 
+
+
+Elapsed: 00:00:00.01
+SQL> select last_day(sysdate) from dual;
+
+LAST_DAY(                                                                       
+---------                                                                       
+31-DEC-19                                                                       
+
+Elapsed: 00:00:00.01
+SQL> select last_day('09-feb-2008') from dual;
+
+LAST_DAY(                                                                       
+---------                                                                       
+29-FEB-08                                                                       
+
+Elapsed: 00:00:00.01
+SQL> select next_day('09-feb-2008') from dual;
+select next_day('09-feb-2008') from dual
+       *
+ERROR at line 1:
+ORA-00909: invalid number of arguments 
+
+
+Elapsed: 00:00:00.02
+SQL> select next_day(sysdate,'Monday') from dual;
+
+NEXT_DAY(                                                                       
+---------                                                                       
+06-JAN-20                                                                       
+
+Elapsed: 00:00:00.01
+SQL> select next_day(sysdate,'Tuesday') from dual;
+
+NEXT_DAY(                                                                       
+---------                                                                       
+31-DEC-19                                                                       
+
+Elapsed: 00:00:00.01
+SQL> select round(sysdate,'year'),trunc(sysdate,'year') from dual;
+
+ROUND(SYS TRUNC(SYS                                                             
+--------- ---------                                                             
+01-JAN-20 01-JAN-19                                                             
+
+Elapsed: 00:00:00.01
+SQL> select round(sysdate,'month'),trunc(sysdate,'month') from dual;
+
+ROUND(SYS TRUNC(SYS                                                             
+--------- ---------                                                             
+01-JAN-20 01-DEC-19                                                             
+
+Elapsed: 00:00:00.01
+SQL> select round(to_date('15-feb-2019'),'month'),trunc(to_date('15-feb-2019),'month') from dual;
+ERROR:
+ORA-01756: quoted string not properly terminated 
+
+
+Elapsed: 00:00:00.01
+SQL> select round(to_date('15-feb-2019'),'month'),trunc(to_date('15-feb-2019'),'month') from dual;
+
+ROUND(TO_ TRUNC(TO_                                                             
+--------- ---------                                                             
+01-FEB-19 01-FEB-19                                                             
+
+Elapsed: 00:00:00.01
+SQL> select round(to_date('15-feb-2019'),'month') "Round" ,trunc(to_date('16-feb-2019'),'month') "Trunc" from dual;
+
+Round     Trunc                                                                 
+--------- ---------                                                             
+01-FEB-19 01-FEB-19                                                             
+
+Elapsed: 00:00:00.01
+SQL> select round(to_date('15-feb-2019'),'month') "Round" ,trunc(to_date('16-feb-2019'),'month') "Trunc" from dual;
+
+Round     Trunc                                                                 
+--------- ---------                                                             
+01-FEB-19 01-FEB-19                                                             
+
+Elapsed: 00:00:00.01
+SQL> select round(to_date('16-feb-2019'),'month') "Round" ,trunc(to_date('16-feb-2019'),'month') "Trunc" from dual;
+
+Round     Trunc                                                                 
+--------- ---------                                                             
+01-MAR-19 01-FEB-19                                                             
+
+Elapsed: 00:00:00.01
+SQL> select mod(4567,3) from dual;
+
+MOD(4567,3)                                                                     
+-----------                                                                     
+          1                                                                     
+
+Elapsed: 00:00:00.01
+SQL> select mod(4567,7) from dual;
+
+MOD(4567,7)                                                                     
+-----------                                                                     
+          3                                                                     
+
+Elapsed: 00:00:00.01
+SQL> select round(89044.726,-2), trunc(89044.726,-2) from dual;
+
+ROUND(89044.726,-2) TRUNC(89044.726,-2)                                         
+------------------- -------------------                                         
+              89000               89000                                         
+
+Elapsed: 00:00:00.01
+SQL> select round(89044.726,0), trunc(89044.726,0) from dual;
+
+ROUND(89044.726,0) TRUNC(89044.726,0)                                           
+------------------ ------------------                                           
+             89045              89044                                           
+
+Elapsed: 00:00:00.01
+SQL> select to_char(sysdate,'ddth "of" Month') from dual;
+
+TO_CHAR(SYSDATE,'                                                               
+-----------------                                                               
+30th of December                                                                
+
+Elapsed: 00:00:00.04
+SQL> select to_char(sysdate,'d') "Day of week" from dual;
+
+D                                                                               
+-                                                                               
+2                                                                               
+
+Elapsed: 00:00:00.01
+SQL> select to_char(sysdate,'dd') "Day of the Month" from dual;
+
+Da                                                                              
+--                                                                              
+30                                                                              
+
+Elapsed: 00:00:00.01
+SQL> select to_char(sysdate,'ddd') "Day of the Year" from dual;
+
+Day                                                                             
+---                                                                             
+364                                                                             
+
+Elapsed: 00:00:00.01
+SQL> select to_char(sysdate,'y') "Last digit of the Year" from dual;
+
+L                                                                               
+-                                                                               
+9                                                                               
+
+Elapsed: 00:00:00.01
+SQL> select to_char(sysdate,'yy') "Last two digit of the Year" from dual;
+
+La                                                                              
+--                                                                              
+19                                                                              
+
+Elapsed: 00:00:00.01
+SQL> select to_char(sysdate,'mm') "Month of the Year" from dual;
+
+Mo                                                                              
+--                                                                              
+12                                                                              
+
+Elapsed: 00:00:00.01
+SQL> select to_char(sysdate,'year') "spelling case sensitive" from dual;
+
+spelling case sensitive                                                         
+------------------------------------------                                      
+twenty nineteen                                                                 
+
+Elapsed: 00:00:00.01
+SQL> select to_char(sysdate,'month') "spelling case sensitive" from dual;
+
+spelling                                                                        
+---------                                                                       
+december                                                                        
+
+Elapsed: 00:00:00.01
+SQL> select to_char(sysdate,'mon') "spelling case sensitive" from dual;
+
+spe                                                                             
+---                                                                             
+dec                                                                             
+
+Elapsed: 00:00:00.01
+SQL> select to_char(sysdate,'Day') "spelling case sensitive" from dual;
+
+spelling                                                                        
+---------                                                                       
+Monday                                                                          
+
+Elapsed: 00:00:00.01
+SQL> select to_char(sysdate,'Dy') "spelling case sensitive" from dual;
+
+spe                                                                             
+---                                                                             
+Mon                                                                             
+
+Elapsed: 00:00:00.01
+SQL> select to_char(sysdate,'D') "spelling case sensitive" from dual;
+
+s                                                                               
+-                                                                               
+2                                                                               
+
+Elapsed: 00:00:00.01
+SQL> select to_char(sysdate,'Ddth') "spelling case sensitive" from dual;
+
+spel                                                                            
+----                                                                            
+30th                                                                            
+
+Elapsed: 00:00:00.01
+SQL> select to_char(sysdate,'Ddspth') "spelling case sensitive" from dual;
+
+spelling case                                                                   
+--------------                                                                  
+Thirtieth                                                                       
+
+Elapsed: 00:00:00.01
+SQL> select to_char(sysdate,'Ddsp') "spelling case sensitive" from dual;
+
+spelling cas                                                                    
+------------                                                                    
+Thirty                                                                          
+
+Elapsed: 00:00:00.01
+SQL> select to_char(sysdate-29,'Ddspth') "spelling case sensitive" from dual;
+
+spelling case                                                                   
+--------------                                                                  
+First                                                                           
+
+Elapsed: 00:00:00.01
+SQL> select to_char(sysdate-29,'Ddsp') "spelling case sensitive" from dual;
+
+spelling cas                                                                    
+------------                                                                    
+One                                                                             
+
+Elapsed: 00:00:00.02
+SQL> spool off;
