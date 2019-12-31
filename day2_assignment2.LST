@@ -1,0 +1,2743 @@
+SQL> select current_date "Date" from dual;
+
+Date                                                                            
+---------                                                                       
+31-DEC-19                                                                       
+
+SQL> select employee_id, last_name, salary, round(salary*1.15) "New Salary" from employees;
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary                     
+----------- ------------------------- ---------- ----------                     
+        100 King                           24000      27600                     
+        101 Kochhar                        17000      19550                     
+        102 De Haan                        17000      19550                     
+        103 Hunold                          9000      10350                     
+        104 Ernst                           6000       6900                     
+        105 Austin                          4800       5520                     
+        106 Pataballa                       4800       5520                     
+        107 Lorentz                         4200       4830                     
+        108 Greenberg                      12008      13809                     
+        109 Faviet                          9000      10350                     
+        110 Chen                            8200       9430                     
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary                     
+----------- ------------------------- ---------- ----------                     
+        111 Sciarra                         7700       8855                     
+        112 Urman                           7800       8970                     
+        113 Popp                            6900       7935                     
+        114 Raphaely                       11000      12650                     
+        115 Khoo                            3100       3565                     
+        116 Baida                           2900       3335                     
+        117 Tobias                          2800       3220                     
+        118 Himuro                          2600       2990                     
+        119 Colmenares                      2500       2875                     
+        120 Weiss                           8000       9200                     
+        121 Fripp                           8200       9430                     
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary                     
+----------- ------------------------- ---------- ----------                     
+        122 Kaufling                        7900       9085                     
+        123 Vollman                         6500       7475                     
+        124 Mourgos                         5800       6670                     
+        125 Nayer                           3200       3680                     
+        126 Mikkilineni                     2700       3105                     
+        127 Landry                          2400       2760                     
+        128 Markle                          2200       2530                     
+        129 Bissot                          3300       3795                     
+        130 Atkinson                        2800       3220                     
+        131 Marlow                          2500       2875                     
+        132 Olson                           2100       2415                     
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary                     
+----------- ------------------------- ---------- ----------                     
+        133 Mallin                          3300       3795                     
+        134 Rogers                          2900       3335                     
+        135 Gee                             2400       2760                     
+        136 Philtanker                      2200       2530                     
+        137 Ladwig                          3600       4140                     
+        138 Stiles                          3200       3680                     
+        139 Seo                             2700       3105                     
+        140 Patel                           2500       2875                     
+        141 Rajs                            3500       4025                     
+        142 Davies                          3100       3565                     
+        143 Matos                           2600       2990                     
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary                     
+----------- ------------------------- ---------- ----------                     
+        144 Vargas                          2500       2875                     
+        145 Russell                        14000      16100                     
+        146 Partners                       13500      15525                     
+        147 Errazuriz                      12000      13800                     
+        148 Cambrault                      11000      12650                     
+        149 Zlotkey                        10500      12075                     
+        150 Tucker                         10000      11500                     
+        151 Bernstein                       9500      10925                     
+        152 Hall                            9000      10350                     
+        153 Olsen                           8000       9200                     
+        154 Cambrault                       7500       8625                     
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary                     
+----------- ------------------------- ---------- ----------                     
+        155 Tuvault                         7000       8050                     
+        156 King                           10000      11500                     
+        157 Sully                           9500      10925                     
+        158 McEwen                          9000      10350                     
+        159 Smith                           8000       9200                     
+        160 Doran                           7500       8625                     
+        161 Sewall                          7000       8050                     
+        162 Vishney                        10500      12075                     
+        163 Greene                          9500      10925                     
+        164 Marvins                         7200       8280                     
+        165 Lee                             6800       7820                     
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary                     
+----------- ------------------------- ---------- ----------                     
+        166 Ande                            6400       7360                     
+        167 Banda                           6200       7130                     
+        168 Ozer                           11500      13225                     
+        169 Bloom                          10000      11500                     
+        170 Fox                             9600      11040                     
+        171 Smith                           7400       8510                     
+        172 Bates                           7300       8395                     
+        173 Kumar                           6100       7015                     
+        174 Abel                           11000      12650                     
+        175 Hutton                          8800      10120                     
+        176 Taylor                          8600       9890                     
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary                     
+----------- ------------------------- ---------- ----------                     
+        177 Livingston                      8400       9660                     
+        178 Grant                           7000       8050                     
+        179 Johnson                         6200       7130                     
+        180 Taylor                          3200       3680                     
+        181 Fleaur                          3100       3565                     
+        182 Sullivan                        2500       2875                     
+        183 Geoni                           2800       3220                     
+        184 Sarchand                        4200       4830                     
+        185 Bull                            4100       4715                     
+        186 Dellinger                       3400       3910                     
+        187 Cabrio                          3000       3450                     
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary                     
+----------- ------------------------- ---------- ----------                     
+        188 Chung                           3800       4370                     
+        189 Dilly                           3600       4140                     
+        190 Gates                           2900       3335                     
+        191 Perkins                         2500       2875                     
+        192 Bell                            4000       4600                     
+        193 Everett                         3900       4485                     
+        194 McCain                          3200       3680                     
+        195 Jones                           2800       3220                     
+        196 Walsh                           3100       3565                     
+        197 Feeney                          3000       3450                     
+        198 OConnell                        2600       2990                     
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary                     
+----------- ------------------------- ---------- ----------                     
+        199 Grant                           2600       2990                     
+        200 Whalen                          4400       5060                     
+        201 Hartstein                      13000      14950                     
+        202 Fay                             6000       6900                     
+        203 Mavris                          6500       7475                     
+        204 Baer                           10000      11500                     
+        205 Higgins                        12008      13809                     
+        206 Gietz                           8300       9545                     
+
+107 rows selected.
+
+SQL> select employee_id, last_name, salary, round(salary*1.15) "New Salary", (salary-round(salary*1.15)) "Increase" from employees;
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary   Increase          
+----------- ------------------------- ---------- ---------- ----------          
+        100 King                           24000      27600      -3600          
+        101 Kochhar                        17000      19550      -2550          
+        102 De Haan                        17000      19550      -2550          
+        103 Hunold                          9000      10350      -1350          
+        104 Ernst                           6000       6900       -900          
+        105 Austin                          4800       5520       -720          
+        106 Pataballa                       4800       5520       -720          
+        107 Lorentz                         4200       4830       -630          
+        108 Greenberg                      12008      13809      -1801          
+        109 Faviet                          9000      10350      -1350          
+        110 Chen                            8200       9430      -1230          
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary   Increase          
+----------- ------------------------- ---------- ---------- ----------          
+        111 Sciarra                         7700       8855      -1155          
+        112 Urman                           7800       8970      -1170          
+        113 Popp                            6900       7935      -1035          
+        114 Raphaely                       11000      12650      -1650          
+        115 Khoo                            3100       3565       -465          
+        116 Baida                           2900       3335       -435          
+        117 Tobias                          2800       3220       -420          
+        118 Himuro                          2600       2990       -390          
+        119 Colmenares                      2500       2875       -375          
+        120 Weiss                           8000       9200      -1200          
+        121 Fripp                           8200       9430      -1230          
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary   Increase          
+----------- ------------------------- ---------- ---------- ----------          
+        122 Kaufling                        7900       9085      -1185          
+        123 Vollman                         6500       7475       -975          
+        124 Mourgos                         5800       6670       -870          
+        125 Nayer                           3200       3680       -480          
+        126 Mikkilineni                     2700       3105       -405          
+        127 Landry                          2400       2760       -360          
+        128 Markle                          2200       2530       -330          
+        129 Bissot                          3300       3795       -495          
+        130 Atkinson                        2800       3220       -420          
+        131 Marlow                          2500       2875       -375          
+        132 Olson                           2100       2415       -315          
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary   Increase          
+----------- ------------------------- ---------- ---------- ----------          
+        133 Mallin                          3300       3795       -495          
+        134 Rogers                          2900       3335       -435          
+        135 Gee                             2400       2760       -360          
+        136 Philtanker                      2200       2530       -330          
+        137 Ladwig                          3600       4140       -540          
+        138 Stiles                          3200       3680       -480          
+        139 Seo                             2700       3105       -405          
+        140 Patel                           2500       2875       -375          
+        141 Rajs                            3500       4025       -525          
+        142 Davies                          3100       3565       -465          
+        143 Matos                           2600       2990       -390          
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary   Increase          
+----------- ------------------------- ---------- ---------- ----------          
+        144 Vargas                          2500       2875       -375          
+        145 Russell                        14000      16100      -2100          
+        146 Partners                       13500      15525      -2025          
+        147 Errazuriz                      12000      13800      -1800          
+        148 Cambrault                      11000      12650      -1650          
+        149 Zlotkey                        10500      12075      -1575          
+        150 Tucker                         10000      11500      -1500          
+        151 Bernstein                       9500      10925      -1425          
+        152 Hall                            9000      10350      -1350          
+        153 Olsen                           8000       9200      -1200          
+        154 Cambrault                       7500       8625      -1125          
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary   Increase          
+----------- ------------------------- ---------- ---------- ----------          
+        155 Tuvault                         7000       8050      -1050          
+        156 King                           10000      11500      -1500          
+        157 Sully                           9500      10925      -1425          
+        158 McEwen                          9000      10350      -1350          
+        159 Smith                           8000       9200      -1200          
+        160 Doran                           7500       8625      -1125          
+        161 Sewall                          7000       8050      -1050          
+        162 Vishney                        10500      12075      -1575          
+        163 Greene                          9500      10925      -1425          
+        164 Marvins                         7200       8280      -1080          
+        165 Lee                             6800       7820      -1020          
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary   Increase          
+----------- ------------------------- ---------- ---------- ----------          
+        166 Ande                            6400       7360       -960          
+        167 Banda                           6200       7130       -930          
+        168 Ozer                           11500      13225      -1725          
+        169 Bloom                          10000      11500      -1500          
+        170 Fox                             9600      11040      -1440          
+        171 Smith                           7400       8510      -1110          
+        172 Bates                           7300       8395      -1095          
+        173 Kumar                           6100       7015       -915          
+        174 Abel                           11000      12650      -1650          
+        175 Hutton                          8800      10120      -1320          
+        176 Taylor                          8600       9890      -1290          
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary   Increase          
+----------- ------------------------- ---------- ---------- ----------          
+        177 Livingston                      8400       9660      -1260          
+        178 Grant                           7000       8050      -1050          
+        179 Johnson                         6200       7130       -930          
+        180 Taylor                          3200       3680       -480          
+        181 Fleaur                          3100       3565       -465          
+        182 Sullivan                        2500       2875       -375          
+        183 Geoni                           2800       3220       -420          
+        184 Sarchand                        4200       4830       -630          
+        185 Bull                            4100       4715       -615          
+        186 Dellinger                       3400       3910       -510          
+        187 Cabrio                          3000       3450       -450          
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary   Increase          
+----------- ------------------------- ---------- ---------- ----------          
+        188 Chung                           3800       4370       -570          
+        189 Dilly                           3600       4140       -540          
+        190 Gates                           2900       3335       -435          
+        191 Perkins                         2500       2875       -375          
+        192 Bell                            4000       4600       -600          
+        193 Everett                         3900       4485       -585          
+        194 McCain                          3200       3680       -480          
+        195 Jones                           2800       3220       -420          
+        196 Walsh                           3100       3565       -465          
+        197 Feeney                          3000       3450       -450          
+        198 OConnell                        2600       2990       -390          
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary   Increase          
+----------- ------------------------- ---------- ---------- ----------          
+        199 Grant                           2600       2990       -390          
+        200 Whalen                          4400       5060       -660          
+        201 Hartstein                      13000      14950      -1950          
+        202 Fay                             6000       6900       -900          
+        203 Mavris                          6500       7475       -975          
+        204 Baer                           10000      11500      -1500          
+        205 Higgins                        12008      13809      -1801          
+        206 Gietz                           8300       9545      -1245          
+
+107 rows selected.
+
+SQL> select employee_id, last_name, salary, round(salary*1.15) "New Salary", (round(salary*1.15)-salary) "Increase" from employees;
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary   Increase          
+----------- ------------------------- ---------- ---------- ----------          
+        100 King                           24000      27600       3600          
+        101 Kochhar                        17000      19550       2550          
+        102 De Haan                        17000      19550       2550          
+        103 Hunold                          9000      10350       1350          
+        104 Ernst                           6000       6900        900          
+        105 Austin                          4800       5520        720          
+        106 Pataballa                       4800       5520        720          
+        107 Lorentz                         4200       4830        630          
+        108 Greenberg                      12008      13809       1801          
+        109 Faviet                          9000      10350       1350          
+        110 Chen                            8200       9430       1230          
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary   Increase          
+----------- ------------------------- ---------- ---------- ----------          
+        111 Sciarra                         7700       8855       1155          
+        112 Urman                           7800       8970       1170          
+        113 Popp                            6900       7935       1035          
+        114 Raphaely                       11000      12650       1650          
+        115 Khoo                            3100       3565        465          
+        116 Baida                           2900       3335        435          
+        117 Tobias                          2800       3220        420          
+        118 Himuro                          2600       2990        390          
+        119 Colmenares                      2500       2875        375          
+        120 Weiss                           8000       9200       1200          
+        121 Fripp                           8200       9430       1230          
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary   Increase          
+----------- ------------------------- ---------- ---------- ----------          
+        122 Kaufling                        7900       9085       1185          
+        123 Vollman                         6500       7475        975          
+        124 Mourgos                         5800       6670        870          
+        125 Nayer                           3200       3680        480          
+        126 Mikkilineni                     2700       3105        405          
+        127 Landry                          2400       2760        360          
+        128 Markle                          2200       2530        330          
+        129 Bissot                          3300       3795        495          
+        130 Atkinson                        2800       3220        420          
+        131 Marlow                          2500       2875        375          
+        132 Olson                           2100       2415        315          
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary   Increase          
+----------- ------------------------- ---------- ---------- ----------          
+        133 Mallin                          3300       3795        495          
+        134 Rogers                          2900       3335        435          
+        135 Gee                             2400       2760        360          
+        136 Philtanker                      2200       2530        330          
+        137 Ladwig                          3600       4140        540          
+        138 Stiles                          3200       3680        480          
+        139 Seo                             2700       3105        405          
+        140 Patel                           2500       2875        375          
+        141 Rajs                            3500       4025        525          
+        142 Davies                          3100       3565        465          
+        143 Matos                           2600       2990        390          
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary   Increase          
+----------- ------------------------- ---------- ---------- ----------          
+        144 Vargas                          2500       2875        375          
+        145 Russell                        14000      16100       2100          
+        146 Partners                       13500      15525       2025          
+        147 Errazuriz                      12000      13800       1800          
+        148 Cambrault                      11000      12650       1650          
+        149 Zlotkey                        10500      12075       1575          
+        150 Tucker                         10000      11500       1500          
+        151 Bernstein                       9500      10925       1425          
+        152 Hall                            9000      10350       1350          
+        153 Olsen                           8000       9200       1200          
+        154 Cambrault                       7500       8625       1125          
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary   Increase          
+----------- ------------------------- ---------- ---------- ----------          
+        155 Tuvault                         7000       8050       1050          
+        156 King                           10000      11500       1500          
+        157 Sully                           9500      10925       1425          
+        158 McEwen                          9000      10350       1350          
+        159 Smith                           8000       9200       1200          
+        160 Doran                           7500       8625       1125          
+        161 Sewall                          7000       8050       1050          
+        162 Vishney                        10500      12075       1575          
+        163 Greene                          9500      10925       1425          
+        164 Marvins                         7200       8280       1080          
+        165 Lee                             6800       7820       1020          
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary   Increase          
+----------- ------------------------- ---------- ---------- ----------          
+        166 Ande                            6400       7360        960          
+        167 Banda                           6200       7130        930          
+        168 Ozer                           11500      13225       1725          
+        169 Bloom                          10000      11500       1500          
+        170 Fox                             9600      11040       1440          
+        171 Smith                           7400       8510       1110          
+        172 Bates                           7300       8395       1095          
+        173 Kumar                           6100       7015        915          
+        174 Abel                           11000      12650       1650          
+        175 Hutton                          8800      10120       1320          
+        176 Taylor                          8600       9890       1290          
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary   Increase          
+----------- ------------------------- ---------- ---------- ----------          
+        177 Livingston                      8400       9660       1260          
+        178 Grant                           7000       8050       1050          
+        179 Johnson                         6200       7130        930          
+        180 Taylor                          3200       3680        480          
+        181 Fleaur                          3100       3565        465          
+        182 Sullivan                        2500       2875        375          
+        183 Geoni                           2800       3220        420          
+        184 Sarchand                        4200       4830        630          
+        185 Bull                            4100       4715        615          
+        186 Dellinger                       3400       3910        510          
+        187 Cabrio                          3000       3450        450          
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary   Increase          
+----------- ------------------------- ---------- ---------- ----------          
+        188 Chung                           3800       4370        570          
+        189 Dilly                           3600       4140        540          
+        190 Gates                           2900       3335        435          
+        191 Perkins                         2500       2875        375          
+        192 Bell                            4000       4600        600          
+        193 Everett                         3900       4485        585          
+        194 McCain                          3200       3680        480          
+        195 Jones                           2800       3220        420          
+        196 Walsh                           3100       3565        465          
+        197 Feeney                          3000       3450        450          
+        198 OConnell                        2600       2990        390          
+
+EMPLOYEE_ID LAST_NAME                     SALARY New Salary   Increase          
+----------- ------------------------- ---------- ---------- ----------          
+        199 Grant                           2600       2990        390          
+        200 Whalen                          4400       5060        660          
+        201 Hartstein                      13000      14950       1950          
+        202 Fay                             6000       6900        900          
+        203 Mavris                          6500       7475        975          
+        204 Baer                           10000      11500       1500          
+        205 Higgins                        12008      13809       1801          
+        206 Gietz                           8300       9545       1245          
+
+107 rows selected.
+
+SQL> select upper(left(last_name,1))+substr(last_name, 2, length(last_name)) from employees;
+select upper(left(last_name,1))+substr(last_name, 2, length(last_name)) from employees
+             *
+ERROR at line 1:
+ORA-00904: "LEFT": invalid identifier 
+
+
+SQL> select upper(substr(last_name,1,1))+substr(last_name, 2, length(last_name)) from employees;
+select upper(substr(last_name,1,1))+substr(last_name, 2, length(last_name)) from employees
+       *
+ERROR at line 1:
+ORA-01722: invalid number 
+
+
+SQL> select upper(substr(last_name,1,1))+substr(last_name,2,length(last_name)) from employees;
+select upper(substr(last_name,1,1))+substr(last_name,2,length(last_name)) from employees
+       *
+ERROR at line 1:
+ORA-01722: invalid number 
+
+
+SQL> select upper(substr(last_name,1,1))||substr(last_name,2,length(last_name)) from employees;
+
+UPPER(SUBSTR(LAST_NAME,1,                                                       
+-------------------------                                                       
+King                                                                            
+Kochhar                                                                         
+De Haan                                                                         
+Hunold                                                                          
+Ernst                                                                           
+Austin                                                                          
+Pataballa                                                                       
+Lorentz                                                                         
+Greenberg                                                                       
+Faviet                                                                          
+Chen                                                                            
+
+UPPER(SUBSTR(LAST_NAME,1,                                                       
+-------------------------                                                       
+Sciarra                                                                         
+Urman                                                                           
+Popp                                                                            
+Raphaely                                                                        
+Khoo                                                                            
+Baida                                                                           
+Tobias                                                                          
+Himuro                                                                          
+Colmenares                                                                      
+Weiss                                                                           
+Fripp                                                                           
+
+UPPER(SUBSTR(LAST_NAME,1,                                                       
+-------------------------                                                       
+Kaufling                                                                        
+Vollman                                                                         
+Mourgos                                                                         
+Nayer                                                                           
+Mikkilineni                                                                     
+Landry                                                                          
+Markle                                                                          
+Bissot                                                                          
+Atkinson                                                                        
+Marlow                                                                          
+Olson                                                                           
+
+UPPER(SUBSTR(LAST_NAME,1,                                                       
+-------------------------                                                       
+Mallin                                                                          
+Rogers                                                                          
+Gee                                                                             
+Philtanker                                                                      
+Ladwig                                                                          
+Stiles                                                                          
+Seo                                                                             
+Patel                                                                           
+Rajs                                                                            
+Davies                                                                          
+Matos                                                                           
+
+UPPER(SUBSTR(LAST_NAME,1,                                                       
+-------------------------                                                       
+Vargas                                                                          
+Russell                                                                         
+Partners                                                                        
+Errazuriz                                                                       
+Cambrault                                                                       
+Zlotkey                                                                         
+Tucker                                                                          
+Bernstein                                                                       
+Hall                                                                            
+Olsen                                                                           
+Cambrault                                                                       
+
+UPPER(SUBSTR(LAST_NAME,1,                                                       
+-------------------------                                                       
+Tuvault                                                                         
+King                                                                            
+Sully                                                                           
+McEwen                                                                          
+Smith                                                                           
+Doran                                                                           
+Sewall                                                                          
+Vishney                                                                         
+Greene                                                                          
+Marvins                                                                         
+Lee                                                                             
+
+UPPER(SUBSTR(LAST_NAME,1,                                                       
+-------------------------                                                       
+Ande                                                                            
+Banda                                                                           
+Ozer                                                                            
+Bloom                                                                           
+Fox                                                                             
+Smith                                                                           
+Bates                                                                           
+Kumar                                                                           
+Abel                                                                            
+Hutton                                                                          
+Taylor                                                                          
+
+UPPER(SUBSTR(LAST_NAME,1,                                                       
+-------------------------                                                       
+Livingston                                                                      
+Grant                                                                           
+Johnson                                                                         
+Taylor                                                                          
+Fleaur                                                                          
+Sullivan                                                                        
+Geoni                                                                           
+Sarchand                                                                        
+Bull                                                                            
+Dellinger                                                                       
+Cabrio                                                                          
+
+UPPER(SUBSTR(LAST_NAME,1,                                                       
+-------------------------                                                       
+Chung                                                                           
+Dilly                                                                           
+Gates                                                                           
+Perkins                                                                         
+Bell                                                                            
+Everett                                                                         
+McCain                                                                          
+Jones                                                                           
+Walsh                                                                           
+Feeney                                                                          
+OConnell                                                                        
+
+UPPER(SUBSTR(LAST_NAME,1,                                                       
+-------------------------                                                       
+Grant                                                                           
+Whalen                                                                          
+Hartstein                                                                       
+Fay                                                                             
+Mavris                                                                          
+Baer                                                                            
+Higgins                                                                         
+Gietz                                                                           
+
+107 rows selected.
+
+SQL> select decode((substr(last_name,1,1))||substr(last_name,2,length(last_name)), 'J', length(last_name)) "Column J"
+  2  select decode((substr(last_name,1,1))||substr(last_name,2,length(last_name)), 'A', length(last_name)) "Column A"
+  3  
+SQL> select decode((substr(last_name,1,1))||substr(last_name,2,length(last_name)), 'J', length(last_name)) "Column J",
+  2  select decode((substr(last_name,1,1))||substr(last_name,2,length(last_name)), 'A', length(last_name)) "Column A" ,
+  3  select decode((substr(last_name,1,1))||substr(last_name,2,length(last_name)), 'M', length(last_name)) "Column M"
+  4  from employees
+  5  order by last_name;
+select decode((substr(last_name,1,1))||substr(last_name,2,length(last_name)), 'A', length(last_name)) "Column A" ,
+*
+ERROR at line 2:
+ORA-00936: missing expression 
+
+
+SQL> select decode((substr(last_name,1,1)||substr(last_name,2,length(last_name)), 'J', length(last_name)) "Column J",
+  2  select decode((substr(last_name,1,1)||substr(last_name,2,length(last_name)), 'A', length(last_name)) "Column M",
+  3  from employees
+  4  order by last_name;
+select decode((substr(last_name,1,1)||substr(last_name,2,length(last_name)), 'J', length(last_name)) "Column J",
+                                                                           *
+ERROR at line 1:
+ORA-00907: missing right parenthesis 
+
+
+SQL> select decode((substr(last_name,1,1)||substr(last_name,2,length(last_name))), 'J', length(last_name)) "Column J",
+  2  from employees
+  3  order by last_name;
+from employees
+*
+ERROR at line 2:
+ORA-00936: missing expression 
+
+
+SQL> select decode((substr(last_name,1,1)||substr(last_name,2,length(last_name))), 'J', length(last_name)) "Column J"
+  2  from employees
+  3  order by last_name;
+
+  Column J                                                                      
+----------                                                                      
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+
+  Column J                                                                      
+----------                                                                      
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+
+  Column J                                                                      
+----------                                                                      
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+
+  Column J                                                                      
+----------                                                                      
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+
+  Column J                                                                      
+----------                                                                      
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+
+  Column J                                                                      
+----------                                                                      
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+
+  Column J                                                                      
+----------                                                                      
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+
+  Column J                                                                      
+----------                                                                      
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+
+  Column J                                                                      
+----------                                                                      
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+
+  Column J                                                                      
+----------                                                                      
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+
+107 rows selected.
+
+SQL> select decode((substr(last_name,1,1)||substr(last_name,2,length(last_name))), 'J', length(last_name)) "Column J",
+  2  select decode((substr(last_name,1,1)||substr(last_name,2,length(last_name))), 'A', length(last_name)) "Column A",
+  3  select decode((substr(last_name,1,1)||substr(last_name,2,length(last_name))), 'M', length(last_name)) "Column M",
+  4  from employees
+  5  from employees
+  6  
+SQL> select decode((substr(last_name,1,1)||substr(last_name,2,length(last_name))), 'J', length(last_name)) "Column J",
+  2  select decode((substr(last_name,1,1)||substr(last_name,2,length(last_name))), 'A', length(last_name)) "Column A",
+  3  select decode((substr(last_name,1,1)||substr(last_name,2,length(last_name))), 'M', length(last_name)) "Column M"
+  4  from employees
+  5  order by last_name;
+select decode((substr(last_name,1,1)||substr(last_name,2,length(last_name))), 'A', length(last_name)) "Column A",
+*
+ERROR at line 2:
+ORA-00936: missing expression 
+
+
+SQL> select initcap(last_name) "Name",
+  2  length(last_name) "Length of Name"
+  3  from employees
+  4  where last_name like "J%" or
+  5  last_name like "A%" or
+  6  last_name like "M%"
+  7  order by last_name ;
+last_name like "M%"
+               *
+ERROR at line 6:
+ORA-00904: "M%": invalid identifier 
+
+
+SQL> select initcap(last_name) "Name",
+  2  length(last_name) "Length of Name"
+  3  from employees
+  4  where last_name like 'J%' or
+  5  last_name like 'M%' or last_namr like 'A%'
+  6  order by last_name;
+last_name like 'M%' or last_namr like 'A%'
+                       *
+ERROR at line 5:
+ORA-00904: "LAST_NAMR": invalid identifier 
+
+
+SQL> select initcap(last_name) "Name",
+  2  length(last_name) "Length of Name"
+  3  from employees
+  4  where last_name like 'J%' or
+  5  last_name like 'M%' or last_nam like 'A%'
+  6  order by last_name;
+last_name like 'M%' or last_nam like 'A%'
+                       *
+ERROR at line 5:
+ORA-00904: "LAST_NAM": invalid identifier 
+
+
+SQL> select initcap(last_name) "Name",
+  2  length(last_name) "Length of Name"
+  3  from employees
+  4  where last_name like 'J%' or
+  5  last_name like 'M%' or last_name like 'A%'
+  6  order by last_name;
+
+Name                      Length of Name                                        
+------------------------- --------------                                        
+Abel                                   4                                        
+Ande                                   4                                        
+Atkinson                               8                                        
+Austin                                 6                                        
+Johnson                                7                                        
+Jones                                  5                                        
+Mallin                                 6                                        
+Markle                                 6                                        
+Marlow                                 6                                        
+Marvins                                7                                        
+Matos                                  5                                        
+
+Name                      Length of Name                                        
+------------------------- --------------                                        
+Mavris                                 6                                        
+Mccain                                 6                                        
+Mcewen                                 6                                        
+Mikkilineni                           11                                        
+Mourgos                                7                                        
+
+16 rows selected.
+
+SQL> select last_name, round(months_between(sysdate,hire_date) "Months Worked" from employees order by 2 ;
+select last_name, round(months_between(sysdate,hire_date) "Months Worked" from employees order by 2 
+                                                          *
+ERROR at line 1:
+ORA-00907: missing right parenthesis 
+
+
+SQL> select last_name, round(months_between(sysdate,hire_date),0) "Months Worked" from employees order by 2 ;
+
+LAST_NAME                 Months Worked                                         
+------------------------- -------------                                         
+Banda                               140                                         
+Kumar                               140                                         
+Ande                                141                                         
+Markle                              142                                         
+Lee                                 142                                         
+Philtanker                          143                                         
+Zlotkey                             143                                         
+Marvins                             143                                         
+Geoni                               143                                         
+Johnson                             144                                         
+Perkins                             144                                         
+
+LAST_NAME                 Months Worked                                         
+------------------------- -------------                                         
+Grant                               144                                         
+Popp                                145                                         
+Gee                                 145                                         
+Tuvault                             145                                         
+Mourgos                             146                                         
+Cambrault                           147                                         
+Colmenares                          149                                         
+Sullivan                            150                                         
+OConnell                            150                                         
+Ernst                               151                                         
+Grant                               151                                         
+
+LAST_NAME                 Months Worked                                         
+------------------------- -------------                                         
+Olson                               153                                         
+Greene                              153                                         
+Bates                               153                                         
+Jones                               153                                         
+Smith                               154                                         
+Lorentz                             155                                         
+Cabrio                              155                                         
+Landry                              156                                         
+Cambrault                           157                                         
+Himuro                              158                                         
+Sewall                              158                                         
+
+LAST_NAME                 Months Worked                                         
+------------------------- -------------                                         
+Mikkilineni                         159                                         
+Rogers                              160                                         
+Vargas                              162                                         
+Dellinger                           162                                         
+Gates                               162                                         
+McCain                              162                                         
+Feeney                              163                                         
+Livingston                          164                                         
+Walsh                               164                                         
+Patel                               165                                         
+Olsen                               165                                         
+
+LAST_NAME                 Months Worked                                         
+------------------------- -------------                                         
+Bloom                               165                                         
+Taylor                              165                                         
+Urman                               166                                         
+Matos                               166                                         
+Fleaur                              166                                         
+Pataballa                           167                                         
+Seo                                 167                                         
+Fox                                 167                                         
+Taylor                              167                                         
+Hunold                              168                                         
+Baida                               168                                         
+
+LAST_NAME                 Months Worked                                         
+------------------------- -------------                                         
+Doran                               169                                         
+Atkinson                            170                                         
+Stiles                              170                                         
+Vishney                             170                                         
+Kochhar                             171                                         
+Chen                                171                                         
+Sciarra                             171                                         
+Vollman                             171                                         
+Bissot                              172                                         
+Hall                                172                                         
+Fay                                 172                                         
+
+LAST_NAME                 Months Worked                                         
+------------------------- -------------                                         
+Tobias                              173                                         
+Dilly                               173                                         
+Austin                              174                                         
+Nayer                               174                                         
+Chung                               175                                         
+Fripp                               177                                         
+Bernstein                           177                                         
+Hutton                              177                                         
+Errazuriz                           178                                         
+Smith                               178                                         
+Ozer                                178                                         
+
+LAST_NAME                 Months Worked                                         
+------------------------- -------------                                         
+Bull                                178                                         
+Everett                             178                                         
+Marlow                              179                                         
+Davies                              179                                         
+Tucker                              179                                         
+Partners                            180                                         
+Russell                             183                                         
+Weiss                               185                                         
+McEwen                              185                                         
+Mallin                              187                                         
+Abel                                188                                         
+
+LAST_NAME                 Months Worked                                         
+------------------------- -------------                                         
+Sully                               190                                         
+Hartstein                           190                                         
+King                                191                                         
+Sarchand                            191                                         
+Bell                                191                                         
+Rajs                                194                                         
+Whalen                              195                                         
+King                                198                                         
+Ladwig                              198                                         
+Khoo                                199                                         
+Kaufling                            200                                         
+
+LAST_NAME                 Months Worked                                         
+------------------------- -------------                                         
+Raphaely                            205                                         
+Greenberg                           208                                         
+Faviet                              209                                         
+Gietz                               211                                         
+Mavris                              211                                         
+Baer                                211                                         
+Higgins                             211                                         
+De Haan                             228                                         
+
+107 rows selected.
+
+SQL> select last_name||'earns'||salary||'monthly but wants'||3*salary "Dream Salary" from employees;
+
+Dream Salary                                                                    
+--------------------------------------------------------------------------------
+Kingearns24000monthly but wants72000                                            
+Kochharearns17000monthly but wants51000                                         
+De Haanearns17000monthly but wants51000                                         
+Hunoldearns9000monthly but wants27000                                           
+Ernstearns6000monthly but wants18000                                            
+Austinearns4800monthly but wants14400                                           
+Pataballaearns4800monthly but wants14400                                        
+Lorentzearns4200monthly but wants12600                                          
+Greenbergearns12008monthly but wants36024                                       
+Favietearns9000monthly but wants27000                                           
+Chenearns8200monthly but wants24600                                             
+
+Dream Salary                                                                    
+--------------------------------------------------------------------------------
+Sciarraearns7700monthly but wants23100                                          
+Urmanearns7800monthly but wants23400                                            
+Poppearns6900monthly but wants20700                                             
+Raphaelyearns11000monthly but wants33000                                        
+Khooearns3100monthly but wants9300                                              
+Baidaearns2900monthly but wants8700                                             
+Tobiasearns2800monthly but wants8400                                            
+Himuroearns2600monthly but wants7800                                            
+Colmenaresearns2500monthly but wants7500                                        
+Weissearns8000monthly but wants24000                                            
+Frippearns8200monthly but wants24600                                            
+
+Dream Salary                                                                    
+--------------------------------------------------------------------------------
+Kauflingearns7900monthly but wants23700                                         
+Vollmanearns6500monthly but wants19500                                          
+Mourgosearns5800monthly but wants17400                                          
+Nayerearns3200monthly but wants9600                                             
+Mikkilineniearns2700monthly but wants8100                                       
+Landryearns2400monthly but wants7200                                            
+Markleearns2200monthly but wants6600                                            
+Bissotearns3300monthly but wants9900                                            
+Atkinsonearns2800monthly but wants8400                                          
+Marlowearns2500monthly but wants7500                                            
+Olsonearns2100monthly but wants6300                                             
+
+Dream Salary                                                                    
+--------------------------------------------------------------------------------
+Mallinearns3300monthly but wants9900                                            
+Rogersearns2900monthly but wants8700                                            
+Geeearns2400monthly but wants7200                                               
+Philtankerearns2200monthly but wants6600                                        
+Ladwigearns3600monthly but wants10800                                           
+Stilesearns3200monthly but wants9600                                            
+Seoearns2700monthly but wants8100                                               
+Patelearns2500monthly but wants7500                                             
+Rajsearns3500monthly but wants10500                                             
+Daviesearns3100monthly but wants9300                                            
+Matosearns2600monthly but wants7800                                             
+
+Dream Salary                                                                    
+--------------------------------------------------------------------------------
+Vargasearns2500monthly but wants7500                                            
+Russellearns14000monthly but wants42000                                         
+Partnersearns13500monthly but wants40500                                        
+Errazurizearns12000monthly but wants36000                                       
+Cambraultearns11000monthly but wants33000                                       
+Zlotkeyearns10500monthly but wants31500                                         
+Tuckerearns10000monthly but wants30000                                          
+Bernsteinearns9500monthly but wants28500                                        
+Hallearns9000monthly but wants27000                                             
+Olsenearns8000monthly but wants24000                                            
+Cambraultearns7500monthly but wants22500                                        
+
+Dream Salary                                                                    
+--------------------------------------------------------------------------------
+Tuvaultearns7000monthly but wants21000                                          
+Kingearns10000monthly but wants30000                                            
+Sullyearns9500monthly but wants28500                                            
+McEwenearns9000monthly but wants27000                                           
+Smithearns8000monthly but wants24000                                            
+Doranearns7500monthly but wants22500                                            
+Sewallearns7000monthly but wants21000                                           
+Vishneyearns10500monthly but wants31500                                         
+Greeneearns9500monthly but wants28500                                           
+Marvinsearns7200monthly but wants21600                                          
+Leeearns6800monthly but wants20400                                              
+
+Dream Salary                                                                    
+--------------------------------------------------------------------------------
+Andeearns6400monthly but wants19200                                             
+Bandaearns6200monthly but wants18600                                            
+Ozerearns11500monthly but wants34500                                            
+Bloomearns10000monthly but wants30000                                           
+Foxearns9600monthly but wants28800                                              
+Smithearns7400monthly but wants22200                                            
+Batesearns7300monthly but wants21900                                            
+Kumarearns6100monthly but wants18300                                            
+Abelearns11000monthly but wants33000                                            
+Huttonearns8800monthly but wants26400                                           
+Taylorearns8600monthly but wants25800                                           
+
+Dream Salary                                                                    
+--------------------------------------------------------------------------------
+Livingstonearns8400monthly but wants25200                                       
+Grantearns7000monthly but wants21000                                            
+Johnsonearns6200monthly but wants18600                                          
+Taylorearns3200monthly but wants9600                                            
+Fleaurearns3100monthly but wants9300                                            
+Sullivanearns2500monthly but wants7500                                          
+Geoniearns2800monthly but wants8400                                             
+Sarchandearns4200monthly but wants12600                                         
+Bullearns4100monthly but wants12300                                             
+Dellingerearns3400monthly but wants10200                                        
+Cabrioearns3000monthly but wants9000                                            
+
+Dream Salary                                                                    
+--------------------------------------------------------------------------------
+Chungearns3800monthly but wants11400                                            
+Dillyearns3600monthly but wants10800                                            
+Gatesearns2900monthly but wants8700                                             
+Perkinsearns2500monthly but wants7500                                           
+Bellearns4000monthly but wants12000                                             
+Everettearns3900monthly but wants11700                                          
+McCainearns3200monthly but wants9600                                            
+Jonesearns2800monthly but wants8400                                             
+Walshearns3100monthly but wants9300                                             
+Feeneyearns3000monthly but wants9000                                            
+OConnellearns2600monthly but wants7800                                          
+
+Dream Salary                                                                    
+--------------------------------------------------------------------------------
+Grantearns2600monthly but wants7800                                             
+Whalenearns4400monthly but wants13200                                           
+Hartsteinearns13000monthly but wants39000                                       
+Fayearns6000monthly but wants18000                                              
+Mavrisearns6500monthly but wants19500                                           
+Baerearns10000monthly but wants30000                                            
+Higginsearns12008monthly but wants36024                                         
+Gietzearns8300monthly but wants24900                                            
+
+107 rows selected.
+
+SQL> select last_name, lpad(salary,15, '$'), salary from employees;
+
+LAST_NAME                 LPAD(SALARY,15,     SALARY                            
+------------------------- --------------- ----------                            
+King                      $$$$$$$$$$24000      24000                            
+Kochhar                   $$$$$$$$$$17000      17000                            
+De Haan                   $$$$$$$$$$17000      17000                            
+Hunold                    $$$$$$$$$$$9000       9000                            
+Ernst                     $$$$$$$$$$$6000       6000                            
+Austin                    $$$$$$$$$$$4800       4800                            
+Pataballa                 $$$$$$$$$$$4800       4800                            
+Lorentz                   $$$$$$$$$$$4200       4200                            
+Greenberg                 $$$$$$$$$$12008      12008                            
+Faviet                    $$$$$$$$$$$9000       9000                            
+Chen                      $$$$$$$$$$$8200       8200                            
+
+LAST_NAME                 LPAD(SALARY,15,     SALARY                            
+------------------------- --------------- ----------                            
+Sciarra                   $$$$$$$$$$$7700       7700                            
+Urman                     $$$$$$$$$$$7800       7800                            
+Popp                      $$$$$$$$$$$6900       6900                            
+Raphaely                  $$$$$$$$$$11000      11000                            
+Khoo                      $$$$$$$$$$$3100       3100                            
+Baida                     $$$$$$$$$$$2900       2900                            
+Tobias                    $$$$$$$$$$$2800       2800                            
+Himuro                    $$$$$$$$$$$2600       2600                            
+Colmenares                $$$$$$$$$$$2500       2500                            
+Weiss                     $$$$$$$$$$$8000       8000                            
+Fripp                     $$$$$$$$$$$8200       8200                            
+
+LAST_NAME                 LPAD(SALARY,15,     SALARY                            
+------------------------- --------------- ----------                            
+Kaufling                  $$$$$$$$$$$7900       7900                            
+Vollman                   $$$$$$$$$$$6500       6500                            
+Mourgos                   $$$$$$$$$$$5800       5800                            
+Nayer                     $$$$$$$$$$$3200       3200                            
+Mikkilineni               $$$$$$$$$$$2700       2700                            
+Landry                    $$$$$$$$$$$2400       2400                            
+Markle                    $$$$$$$$$$$2200       2200                            
+Bissot                    $$$$$$$$$$$3300       3300                            
+Atkinson                  $$$$$$$$$$$2800       2800                            
+Marlow                    $$$$$$$$$$$2500       2500                            
+Olson                     $$$$$$$$$$$2100       2100                            
+
+LAST_NAME                 LPAD(SALARY,15,     SALARY                            
+------------------------- --------------- ----------                            
+Mallin                    $$$$$$$$$$$3300       3300                            
+Rogers                    $$$$$$$$$$$2900       2900                            
+Gee                       $$$$$$$$$$$2400       2400                            
+Philtanker                $$$$$$$$$$$2200       2200                            
+Ladwig                    $$$$$$$$$$$3600       3600                            
+Stiles                    $$$$$$$$$$$3200       3200                            
+Seo                       $$$$$$$$$$$2700       2700                            
+Patel                     $$$$$$$$$$$2500       2500                            
+Rajs                      $$$$$$$$$$$3500       3500                            
+Davies                    $$$$$$$$$$$3100       3100                            
+Matos                     $$$$$$$$$$$2600       2600                            
+
+LAST_NAME                 LPAD(SALARY,15,     SALARY                            
+------------------------- --------------- ----------                            
+Vargas                    $$$$$$$$$$$2500       2500                            
+Russell                   $$$$$$$$$$14000      14000                            
+Partners                  $$$$$$$$$$13500      13500                            
+Errazuriz                 $$$$$$$$$$12000      12000                            
+Cambrault                 $$$$$$$$$$11000      11000                            
+Zlotkey                   $$$$$$$$$$10500      10500                            
+Tucker                    $$$$$$$$$$10000      10000                            
+Bernstein                 $$$$$$$$$$$9500       9500                            
+Hall                      $$$$$$$$$$$9000       9000                            
+Olsen                     $$$$$$$$$$$8000       8000                            
+Cambrault                 $$$$$$$$$$$7500       7500                            
+
+LAST_NAME                 LPAD(SALARY,15,     SALARY                            
+------------------------- --------------- ----------                            
+Tuvault                   $$$$$$$$$$$7000       7000                            
+King                      $$$$$$$$$$10000      10000                            
+Sully                     $$$$$$$$$$$9500       9500                            
+McEwen                    $$$$$$$$$$$9000       9000                            
+Smith                     $$$$$$$$$$$8000       8000                            
+Doran                     $$$$$$$$$$$7500       7500                            
+Sewall                    $$$$$$$$$$$7000       7000                            
+Vishney                   $$$$$$$$$$10500      10500                            
+Greene                    $$$$$$$$$$$9500       9500                            
+Marvins                   $$$$$$$$$$$7200       7200                            
+Lee                       $$$$$$$$$$$6800       6800                            
+
+LAST_NAME                 LPAD(SALARY,15,     SALARY                            
+------------------------- --------------- ----------                            
+Ande                      $$$$$$$$$$$6400       6400                            
+Banda                     $$$$$$$$$$$6200       6200                            
+Ozer                      $$$$$$$$$$11500      11500                            
+Bloom                     $$$$$$$$$$10000      10000                            
+Fox                       $$$$$$$$$$$9600       9600                            
+Smith                     $$$$$$$$$$$7400       7400                            
+Bates                     $$$$$$$$$$$7300       7300                            
+Kumar                     $$$$$$$$$$$6100       6100                            
+Abel                      $$$$$$$$$$11000      11000                            
+Hutton                    $$$$$$$$$$$8800       8800                            
+Taylor                    $$$$$$$$$$$8600       8600                            
+
+LAST_NAME                 LPAD(SALARY,15,     SALARY                            
+------------------------- --------------- ----------                            
+Livingston                $$$$$$$$$$$8400       8400                            
+Grant                     $$$$$$$$$$$7000       7000                            
+Johnson                   $$$$$$$$$$$6200       6200                            
+Taylor                    $$$$$$$$$$$3200       3200                            
+Fleaur                    $$$$$$$$$$$3100       3100                            
+Sullivan                  $$$$$$$$$$$2500       2500                            
+Geoni                     $$$$$$$$$$$2800       2800                            
+Sarchand                  $$$$$$$$$$$4200       4200                            
+Bull                      $$$$$$$$$$$4100       4100                            
+Dellinger                 $$$$$$$$$$$3400       3400                            
+Cabrio                    $$$$$$$$$$$3000       3000                            
+
+LAST_NAME                 LPAD(SALARY,15,     SALARY                            
+------------------------- --------------- ----------                            
+Chung                     $$$$$$$$$$$3800       3800                            
+Dilly                     $$$$$$$$$$$3600       3600                            
+Gates                     $$$$$$$$$$$2900       2900                            
+Perkins                   $$$$$$$$$$$2500       2500                            
+Bell                      $$$$$$$$$$$4000       4000                            
+Everett                   $$$$$$$$$$$3900       3900                            
+McCain                    $$$$$$$$$$$3200       3200                            
+Jones                     $$$$$$$$$$$2800       2800                            
+Walsh                     $$$$$$$$$$$3100       3100                            
+Feeney                    $$$$$$$$$$$3000       3000                            
+OConnell                  $$$$$$$$$$$2600       2600                            
+
+LAST_NAME                 LPAD(SALARY,15,     SALARY                            
+------------------------- --------------- ----------                            
+Grant                     $$$$$$$$$$$2600       2600                            
+Whalen                    $$$$$$$$$$$4400       4400                            
+Hartstein                 $$$$$$$$$$13000      13000                            
+Fay                       $$$$$$$$$$$6000       6000                            
+Mavris                    $$$$$$$$$$$6500       6500                            
+Baer                      $$$$$$$$$$10000      10000                            
+Higgins                   $$$$$$$$$$12008      12008                            
+Gietz                     $$$$$$$$$$$8300       8300                            
+
+107 rows selected.
+
+SQL> select last_name, lpad(salary,15, '$') from employees;
+
+LAST_NAME                 LPAD(SALARY,15,                                       
+------------------------- ---------------                                       
+King                      $$$$$$$$$$24000                                       
+Kochhar                   $$$$$$$$$$17000                                       
+De Haan                   $$$$$$$$$$17000                                       
+Hunold                    $$$$$$$$$$$9000                                       
+Ernst                     $$$$$$$$$$$6000                                       
+Austin                    $$$$$$$$$$$4800                                       
+Pataballa                 $$$$$$$$$$$4800                                       
+Lorentz                   $$$$$$$$$$$4200                                       
+Greenberg                 $$$$$$$$$$12008                                       
+Faviet                    $$$$$$$$$$$9000                                       
+Chen                      $$$$$$$$$$$8200                                       
+
+LAST_NAME                 LPAD(SALARY,15,                                       
+------------------------- ---------------                                       
+Sciarra                   $$$$$$$$$$$7700                                       
+Urman                     $$$$$$$$$$$7800                                       
+Popp                      $$$$$$$$$$$6900                                       
+Raphaely                  $$$$$$$$$$11000                                       
+Khoo                      $$$$$$$$$$$3100                                       
+Baida                     $$$$$$$$$$$2900                                       
+Tobias                    $$$$$$$$$$$2800                                       
+Himuro                    $$$$$$$$$$$2600                                       
+Colmenares                $$$$$$$$$$$2500                                       
+Weiss                     $$$$$$$$$$$8000                                       
+Fripp                     $$$$$$$$$$$8200                                       
+
+LAST_NAME                 LPAD(SALARY,15,                                       
+------------------------- ---------------                                       
+Kaufling                  $$$$$$$$$$$7900                                       
+Vollman                   $$$$$$$$$$$6500                                       
+Mourgos                   $$$$$$$$$$$5800                                       
+Nayer                     $$$$$$$$$$$3200                                       
+Mikkilineni               $$$$$$$$$$$2700                                       
+Landry                    $$$$$$$$$$$2400                                       
+Markle                    $$$$$$$$$$$2200                                       
+Bissot                    $$$$$$$$$$$3300                                       
+Atkinson                  $$$$$$$$$$$2800                                       
+Marlow                    $$$$$$$$$$$2500                                       
+Olson                     $$$$$$$$$$$2100                                       
+
+LAST_NAME                 LPAD(SALARY,15,                                       
+------------------------- ---------------                                       
+Mallin                    $$$$$$$$$$$3300                                       
+Rogers                    $$$$$$$$$$$2900                                       
+Gee                       $$$$$$$$$$$2400                                       
+Philtanker                $$$$$$$$$$$2200                                       
+Ladwig                    $$$$$$$$$$$3600                                       
+Stiles                    $$$$$$$$$$$3200                                       
+Seo                       $$$$$$$$$$$2700                                       
+Patel                     $$$$$$$$$$$2500                                       
+Rajs                      $$$$$$$$$$$3500                                       
+Davies                    $$$$$$$$$$$3100                                       
+Matos                     $$$$$$$$$$$2600                                       
+
+LAST_NAME                 LPAD(SALARY,15,                                       
+------------------------- ---------------                                       
+Vargas                    $$$$$$$$$$$2500                                       
+Russell                   $$$$$$$$$$14000                                       
+Partners                  $$$$$$$$$$13500                                       
+Errazuriz                 $$$$$$$$$$12000                                       
+Cambrault                 $$$$$$$$$$11000                                       
+Zlotkey                   $$$$$$$$$$10500                                       
+Tucker                    $$$$$$$$$$10000                                       
+Bernstein                 $$$$$$$$$$$9500                                       
+Hall                      $$$$$$$$$$$9000                                       
+Olsen                     $$$$$$$$$$$8000                                       
+Cambrault                 $$$$$$$$$$$7500                                       
+
+LAST_NAME                 LPAD(SALARY,15,                                       
+------------------------- ---------------                                       
+Tuvault                   $$$$$$$$$$$7000                                       
+King                      $$$$$$$$$$10000                                       
+Sully                     $$$$$$$$$$$9500                                       
+McEwen                    $$$$$$$$$$$9000                                       
+Smith                     $$$$$$$$$$$8000                                       
+Doran                     $$$$$$$$$$$7500                                       
+Sewall                    $$$$$$$$$$$7000                                       
+Vishney                   $$$$$$$$$$10500                                       
+Greene                    $$$$$$$$$$$9500                                       
+Marvins                   $$$$$$$$$$$7200                                       
+Lee                       $$$$$$$$$$$6800                                       
+
+LAST_NAME                 LPAD(SALARY,15,                                       
+------------------------- ---------------                                       
+Ande                      $$$$$$$$$$$6400                                       
+Banda                     $$$$$$$$$$$6200                                       
+Ozer                      $$$$$$$$$$11500                                       
+Bloom                     $$$$$$$$$$10000                                       
+Fox                       $$$$$$$$$$$9600                                       
+Smith                     $$$$$$$$$$$7400                                       
+Bates                     $$$$$$$$$$$7300                                       
+Kumar                     $$$$$$$$$$$6100                                       
+Abel                      $$$$$$$$$$11000                                       
+Hutton                    $$$$$$$$$$$8800                                       
+Taylor                    $$$$$$$$$$$8600                                       
+
+LAST_NAME                 LPAD(SALARY,15,                                       
+------------------------- ---------------                                       
+Livingston                $$$$$$$$$$$8400                                       
+Grant                     $$$$$$$$$$$7000                                       
+Johnson                   $$$$$$$$$$$6200                                       
+Taylor                    $$$$$$$$$$$3200                                       
+Fleaur                    $$$$$$$$$$$3100                                       
+Sullivan                  $$$$$$$$$$$2500                                       
+Geoni                     $$$$$$$$$$$2800                                       
+Sarchand                  $$$$$$$$$$$4200                                       
+Bull                      $$$$$$$$$$$4100                                       
+Dellinger                 $$$$$$$$$$$3400                                       
+Cabrio                    $$$$$$$$$$$3000                                       
+
+LAST_NAME                 LPAD(SALARY,15,                                       
+------------------------- ---------------                                       
+Chung                     $$$$$$$$$$$3800                                       
+Dilly                     $$$$$$$$$$$3600                                       
+Gates                     $$$$$$$$$$$2900                                       
+Perkins                   $$$$$$$$$$$2500                                       
+Bell                      $$$$$$$$$$$4000                                       
+Everett                   $$$$$$$$$$$3900                                       
+McCain                    $$$$$$$$$$$3200                                       
+Jones                     $$$$$$$$$$$2800                                       
+Walsh                     $$$$$$$$$$$3100                                       
+Feeney                    $$$$$$$$$$$3000                                       
+OConnell                  $$$$$$$$$$$2600                                       
+
+LAST_NAME                 LPAD(SALARY,15,                                       
+------------------------- ---------------                                       
+Grant                     $$$$$$$$$$$2600                                       
+Whalen                    $$$$$$$$$$$4400                                       
+Hartstein                 $$$$$$$$$$13000                                       
+Fay                       $$$$$$$$$$$6000                                       
+Mavris                    $$$$$$$$$$$6500                                       
+Baer                      $$$$$$$$$$10000                                       
+Higgins                   $$$$$$$$$$12008                                       
+Gietz                     $$$$$$$$$$$8300                                       
+
+107 rows selected.
+
+SQL> select last_name, lpad(salary,13, '$') from employees;
+
+LAST_NAME                 LPAD(SALARY,1                                         
+------------------------- -------------                                         
+King                      $$$$$$$$24000                                         
+Kochhar                   $$$$$$$$17000                                         
+De Haan                   $$$$$$$$17000                                         
+Hunold                    $$$$$$$$$9000                                         
+Ernst                     $$$$$$$$$6000                                         
+Austin                    $$$$$$$$$4800                                         
+Pataballa                 $$$$$$$$$4800                                         
+Lorentz                   $$$$$$$$$4200                                         
+Greenberg                 $$$$$$$$12008                                         
+Faviet                    $$$$$$$$$9000                                         
+Chen                      $$$$$$$$$8200                                         
+
+LAST_NAME                 LPAD(SALARY,1                                         
+------------------------- -------------                                         
+Sciarra                   $$$$$$$$$7700                                         
+Urman                     $$$$$$$$$7800                                         
+Popp                      $$$$$$$$$6900                                         
+Raphaely                  $$$$$$$$11000                                         
+Khoo                      $$$$$$$$$3100                                         
+Baida                     $$$$$$$$$2900                                         
+Tobias                    $$$$$$$$$2800                                         
+Himuro                    $$$$$$$$$2600                                         
+Colmenares                $$$$$$$$$2500                                         
+Weiss                     $$$$$$$$$8000                                         
+Fripp                     $$$$$$$$$8200                                         
+
+LAST_NAME                 LPAD(SALARY,1                                         
+------------------------- -------------                                         
+Kaufling                  $$$$$$$$$7900                                         
+Vollman                   $$$$$$$$$6500                                         
+Mourgos                   $$$$$$$$$5800                                         
+Nayer                     $$$$$$$$$3200                                         
+Mikkilineni               $$$$$$$$$2700                                         
+Landry                    $$$$$$$$$2400                                         
+Markle                    $$$$$$$$$2200                                         
+Bissot                    $$$$$$$$$3300                                         
+Atkinson                  $$$$$$$$$2800                                         
+Marlow                    $$$$$$$$$2500                                         
+Olson                     $$$$$$$$$2100                                         
+
+LAST_NAME                 LPAD(SALARY,1                                         
+------------------------- -------------                                         
+Mallin                    $$$$$$$$$3300                                         
+Rogers                    $$$$$$$$$2900                                         
+Gee                       $$$$$$$$$2400                                         
+Philtanker                $$$$$$$$$2200                                         
+Ladwig                    $$$$$$$$$3600                                         
+Stiles                    $$$$$$$$$3200                                         
+Seo                       $$$$$$$$$2700                                         
+Patel                     $$$$$$$$$2500                                         
+Rajs                      $$$$$$$$$3500                                         
+Davies                    $$$$$$$$$3100                                         
+Matos                     $$$$$$$$$2600                                         
+
+LAST_NAME                 LPAD(SALARY,1                                         
+------------------------- -------------                                         
+Vargas                    $$$$$$$$$2500                                         
+Russell                   $$$$$$$$14000                                         
+Partners                  $$$$$$$$13500                                         
+Errazuriz                 $$$$$$$$12000                                         
+Cambrault                 $$$$$$$$11000                                         
+Zlotkey                   $$$$$$$$10500                                         
+Tucker                    $$$$$$$$10000                                         
+Bernstein                 $$$$$$$$$9500                                         
+Hall                      $$$$$$$$$9000                                         
+Olsen                     $$$$$$$$$8000                                         
+Cambrault                 $$$$$$$$$7500                                         
+
+LAST_NAME                 LPAD(SALARY,1                                         
+------------------------- -------------                                         
+Tuvault                   $$$$$$$$$7000                                         
+King                      $$$$$$$$10000                                         
+Sully                     $$$$$$$$$9500                                         
+McEwen                    $$$$$$$$$9000                                         
+Smith                     $$$$$$$$$8000                                         
+Doran                     $$$$$$$$$7500                                         
+Sewall                    $$$$$$$$$7000                                         
+Vishney                   $$$$$$$$10500                                         
+Greene                    $$$$$$$$$9500                                         
+Marvins                   $$$$$$$$$7200                                         
+Lee                       $$$$$$$$$6800                                         
+
+LAST_NAME                 LPAD(SALARY,1                                         
+------------------------- -------------                                         
+Ande                      $$$$$$$$$6400                                         
+Banda                     $$$$$$$$$6200                                         
+Ozer                      $$$$$$$$11500                                         
+Bloom                     $$$$$$$$10000                                         
+Fox                       $$$$$$$$$9600                                         
+Smith                     $$$$$$$$$7400                                         
+Bates                     $$$$$$$$$7300                                         
+Kumar                     $$$$$$$$$6100                                         
+Abel                      $$$$$$$$11000                                         
+Hutton                    $$$$$$$$$8800                                         
+Taylor                    $$$$$$$$$8600                                         
+
+LAST_NAME                 LPAD(SALARY,1                                         
+------------------------- -------------                                         
+Livingston                $$$$$$$$$8400                                         
+Grant                     $$$$$$$$$7000                                         
+Johnson                   $$$$$$$$$6200                                         
+Taylor                    $$$$$$$$$3200                                         
+Fleaur                    $$$$$$$$$3100                                         
+Sullivan                  $$$$$$$$$2500                                         
+Geoni                     $$$$$$$$$2800                                         
+Sarchand                  $$$$$$$$$4200                                         
+Bull                      $$$$$$$$$4100                                         
+Dellinger                 $$$$$$$$$3400                                         
+Cabrio                    $$$$$$$$$3000                                         
+
+LAST_NAME                 LPAD(SALARY,1                                         
+------------------------- -------------                                         
+Chung                     $$$$$$$$$3800                                         
+Dilly                     $$$$$$$$$3600                                         
+Gates                     $$$$$$$$$2900                                         
+Perkins                   $$$$$$$$$2500                                         
+Bell                      $$$$$$$$$4000                                         
+Everett                   $$$$$$$$$3900                                         
+McCain                    $$$$$$$$$3200                                         
+Jones                     $$$$$$$$$2800                                         
+Walsh                     $$$$$$$$$3100                                         
+Feeney                    $$$$$$$$$3000                                         
+OConnell                  $$$$$$$$$2600                                         
+
+LAST_NAME                 LPAD(SALARY,1                                         
+------------------------- -------------                                         
+Grant                     $$$$$$$$$2600                                         
+Whalen                    $$$$$$$$$4400                                         
+Hartstein                 $$$$$$$$13000                                         
+Fay                       $$$$$$$$$6000                                         
+Mavris                    $$$$$$$$$6500                                         
+Baer                      $$$$$$$$10000                                         
+Higgins                   $$$$$$$$12008                                         
+Gietz                     $$$$$$$$$8300                                         
+
+107 rows selected.
+
+SQL> select mod(24000,1000) from dual;
+
+MOD(24000,1000)                                                                 
+---------------                                                                 
+              0                                                                 
+
+SQL> select 24000%1000 from dual;
+select 24000%1000 from dual
+            *
+ERROR at line 1:
+ORA-00911: invalid character 
+
+
+SQL> select mod(24500,1000) from dual;
+
+MOD(24500,1000)                                                                 
+---------------                                                                 
+            500                                                                 
+
+SQL> select 24000/1000 from dual;
+
+24000/1000                                                                      
+----------                                                                      
+        24                                                                      
+
+SQL> select salary/1000 "Number of stars" from employees;
+
+Number of stars                                                                 
+---------------                                                                 
+             24                                                                 
+             17                                                                 
+             17                                                                 
+              9                                                                 
+              6                                                                 
+            4.8                                                                 
+            4.8                                                                 
+            4.2                                                                 
+         12.008                                                                 
+              9                                                                 
+            8.2                                                                 
+
+Number of stars                                                                 
+---------------                                                                 
+            7.7                                                                 
+            7.8                                                                 
+            6.9                                                                 
+             11                                                                 
+            3.1                                                                 
+            2.9                                                                 
+            2.8                                                                 
+            2.6                                                                 
+            2.5                                                                 
+              8                                                                 
+            8.2                                                                 
+
+Number of stars                                                                 
+---------------                                                                 
+            7.9                                                                 
+            6.5                                                                 
+            5.8                                                                 
+            3.2                                                                 
+            2.7                                                                 
+            2.4                                                                 
+            2.2                                                                 
+            3.3                                                                 
+            2.8                                                                 
+            2.5                                                                 
+            2.1                                                                 
+
+Number of stars                                                                 
+---------------                                                                 
+            3.3                                                                 
+            2.9                                                                 
+            2.4                                                                 
+            2.2                                                                 
+            3.6                                                                 
+            3.2                                                                 
+            2.7                                                                 
+            2.5                                                                 
+            3.5                                                                 
+            3.1                                                                 
+            2.6                                                                 
+
+Number of stars                                                                 
+---------------                                                                 
+            2.5                                                                 
+             14                                                                 
+           13.5                                                                 
+             12                                                                 
+             11                                                                 
+           10.5                                                                 
+             10                                                                 
+            9.5                                                                 
+              9                                                                 
+              8                                                                 
+            7.5                                                                 
+
+Number of stars                                                                 
+---------------                                                                 
+              7                                                                 
+             10                                                                 
+            9.5                                                                 
+              9                                                                 
+              8                                                                 
+            7.5                                                                 
+              7                                                                 
+           10.5                                                                 
+            9.5                                                                 
+            7.2                                                                 
+            6.8                                                                 
+
+Number of stars                                                                 
+---------------                                                                 
+            6.4                                                                 
+            6.2                                                                 
+           11.5                                                                 
+             10                                                                 
+            9.6                                                                 
+            7.4                                                                 
+            7.3                                                                 
+            6.1                                                                 
+             11                                                                 
+            8.8                                                                 
+            8.6                                                                 
+
+Number of stars                                                                 
+---------------                                                                 
+            8.4                                                                 
+              7                                                                 
+            6.2                                                                 
+            3.2                                                                 
+            3.1                                                                 
+            2.5                                                                 
+            2.8                                                                 
+            4.2                                                                 
+            4.1                                                                 
+            3.4                                                                 
+              3                                                                 
+
+Number of stars                                                                 
+---------------                                                                 
+            3.8                                                                 
+            3.6                                                                 
+            2.9                                                                 
+            2.5                                                                 
+              4                                                                 
+            3.9                                                                 
+            3.2                                                                 
+            2.8                                                                 
+            3.1                                                                 
+              3                                                                 
+            2.6                                                                 
+
+Number of stars                                                                 
+---------------                                                                 
+            2.6                                                                 
+            4.4                                                                 
+             13                                                                 
+              6                                                                 
+            6.5                                                                 
+             10                                                                 
+         12.008                                                                 
+            8.3                                                                 
+
+107 rows selected.
+
+SQL> select replicate('*', salary/1000) "Number of stars" from employees;
+select replicate('*', salary/1000) "Number of stars" from employees
+       *
+ERROR at line 1:
+ORA-00904: "REPLICATE": invalid identifier 
+
+
+SQL> select rpad( ,salary/1000, '*') "Number of stars" from employees;
+select rpad( ,salary/1000, '*') "Number of stars" from employees
+             *
+ERROR at line 1:
+ORA-00936: missing expression 
+
+
+SQL> select rpad('h' ,salary/1000, '*') "Number of stars" from employees;
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+h***********************                                                        
+h****************                                                               
+h****************                                                               
+h********                                                                       
+h*****                                                                          
+h***                                                                            
+h***                                                                            
+h***                                                                            
+h***********                                                                    
+h********                                                                       
+h*******                                                                        
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+h******                                                                         
+h******                                                                         
+h*****                                                                          
+h**********                                                                     
+h**                                                                             
+h*                                                                              
+h*                                                                              
+h*                                                                              
+h*                                                                              
+h*******                                                                        
+h*******                                                                        
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+h******                                                                         
+h*****                                                                          
+h****                                                                           
+h**                                                                             
+h*                                                                              
+h*                                                                              
+h*                                                                              
+h**                                                                             
+h*                                                                              
+h*                                                                              
+h*                                                                              
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+h**                                                                             
+h*                                                                              
+h*                                                                              
+h*                                                                              
+h**                                                                             
+h**                                                                             
+h*                                                                              
+h*                                                                              
+h**                                                                             
+h**                                                                             
+h*                                                                              
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+h*                                                                              
+h*************                                                                  
+h************                                                                   
+h***********                                                                    
+h**********                                                                     
+h*********                                                                      
+h*********                                                                      
+h********                                                                       
+h********                                                                       
+h*******                                                                        
+h******                                                                         
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+h******                                                                         
+h*********                                                                      
+h********                                                                       
+h********                                                                       
+h*******                                                                        
+h******                                                                         
+h******                                                                         
+h*********                                                                      
+h********                                                                       
+h******                                                                         
+h*****                                                                          
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+h*****                                                                          
+h*****                                                                          
+h**********                                                                     
+h*********                                                                      
+h********                                                                       
+h******                                                                         
+h******                                                                         
+h*****                                                                          
+h**********                                                                     
+h*******                                                                        
+h*******                                                                        
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+h*******                                                                        
+h******                                                                         
+h*****                                                                          
+h**                                                                             
+h**                                                                             
+h*                                                                              
+h*                                                                              
+h***                                                                            
+h***                                                                            
+h**                                                                             
+h**                                                                             
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+h**                                                                             
+h**                                                                             
+h*                                                                              
+h*                                                                              
+h***                                                                            
+h**                                                                             
+h**                                                                             
+h*                                                                              
+h**                                                                             
+h**                                                                             
+h*                                                                              
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+h*                                                                              
+h***                                                                            
+h************                                                                   
+h*****                                                                          
+h*****                                                                          
+h*********                                                                      
+h***********                                                                    
+h*******                                                                        
+
+107 rows selected.
+
+SQL> select rpad(null ,salary/1000, '*') "Number of stars" from employees;
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+
+107 rows selected.
+
+SQL> select rpad('*' ,(salary/1000)-1, '*') "Number of stars" from employees;
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+***********************                                                         
+****************                                                                
+****************                                                                
+********                                                                        
+*****                                                                           
+***                                                                             
+***                                                                             
+***                                                                             
+***********                                                                     
+********                                                                        
+*******                                                                         
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+******                                                                          
+******                                                                          
+*****                                                                           
+**********                                                                      
+**                                                                              
+*                                                                               
+*                                                                               
+*                                                                               
+*                                                                               
+*******                                                                         
+*******                                                                         
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+******                                                                          
+*****                                                                           
+****                                                                            
+**                                                                              
+*                                                                               
+*                                                                               
+*                                                                               
+**                                                                              
+*                                                                               
+*                                                                               
+*                                                                               
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+**                                                                              
+*                                                                               
+*                                                                               
+*                                                                               
+**                                                                              
+**                                                                              
+*                                                                               
+*                                                                               
+**                                                                              
+**                                                                              
+*                                                                               
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+*                                                                               
+*************                                                                   
+************                                                                    
+***********                                                                     
+**********                                                                      
+*********                                                                       
+*********                                                                       
+********                                                                        
+********                                                                        
+*******                                                                         
+******                                                                          
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+******                                                                          
+*********                                                                       
+********                                                                        
+********                                                                        
+*******                                                                         
+******                                                                          
+******                                                                          
+*********                                                                       
+********                                                                        
+******                                                                          
+*****                                                                           
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+*****                                                                           
+*****                                                                           
+**********                                                                      
+*********                                                                       
+********                                                                        
+******                                                                          
+******                                                                          
+*****                                                                           
+**********                                                                      
+*******                                                                         
+*******                                                                         
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+*******                                                                         
+******                                                                          
+*****                                                                           
+**                                                                              
+**                                                                              
+*                                                                               
+*                                                                               
+***                                                                             
+***                                                                             
+**                                                                              
+**                                                                              
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+**                                                                              
+**                                                                              
+*                                                                               
+*                                                                               
+***                                                                             
+**                                                                              
+**                                                                              
+*                                                                               
+**                                                                              
+**                                                                              
+*                                                                               
+
+Number of stars                                                                 
+--------------------------------------------------------------------------------
+*                                                                               
+***                                                                             
+************                                                                    
+*****                                                                           
+*****                                                                           
+*********                                                                       
+***********                                                                     
+*******                                                                         
+
+107 rows selected.
+
+SQL> select last_name, hire_date
+  2  , to_char(hire_date,'day')
+  3  from employees;
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+King                      17-JUN-03 tuesday                                     
+Kochhar                   21-SEP-05 wednesday                                   
+De Haan                   13-JAN-01 saturday                                    
+Hunold                    03-JAN-06 tuesday                                     
+Ernst                     21-MAY-07 monday                                      
+Austin                    25-JUN-05 saturday                                    
+Pataballa                 05-FEB-06 sunday                                      
+Lorentz                   07-FEB-07 wednesday                                   
+Greenberg                 17-AUG-02 saturday                                    
+Faviet                    16-AUG-02 friday                                      
+Chen                      28-SEP-05 wednesday                                   
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Sciarra                   30-SEP-05 friday                                      
+Urman                     07-MAR-06 tuesday                                     
+Popp                      07-DEC-07 friday                                      
+Raphaely                  07-DEC-02 saturday                                    
+Khoo                      18-MAY-03 sunday                                      
+Baida                     24-DEC-05 saturday                                    
+Tobias                    24-JUL-05 sunday                                      
+Himuro                    15-NOV-06 wednesday                                   
+Colmenares                10-AUG-07 friday                                      
+Weiss                     18-JUL-04 sunday                                      
+Fripp                     10-APR-05 sunday                                      
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Kaufling                  01-MAY-03 thursday                                    
+Vollman                   10-OCT-05 monday                                      
+Mourgos                   16-NOV-07 friday                                      
+Nayer                     16-JUL-05 saturday                                    
+Mikkilineni               28-SEP-06 thursday                                    
+Landry                    14-JAN-07 sunday                                      
+Markle                    08-MAR-08 saturday                                    
+Bissot                    20-AUG-05 saturday                                    
+Atkinson                  30-OCT-05 sunday                                      
+Marlow                    16-FEB-05 wednesday                                   
+Olson                     10-APR-07 tuesday                                     
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Mallin                    14-JUN-04 monday                                      
+Rogers                    26-AUG-06 saturday                                    
+Gee                       12-DEC-07 wednesday                                   
+Philtanker                06-FEB-08 wednesday                                   
+Ladwig                    14-JUL-03 monday                                      
+Stiles                    26-OCT-05 wednesday                                   
+Seo                       12-FEB-06 sunday                                      
+Patel                     06-APR-06 thursday                                    
+Rajs                      17-OCT-03 friday                                      
+Davies                    29-JAN-05 saturday                                    
+Matos                     15-MAR-06 wednesday                                   
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Vargas                    09-JUL-06 sunday                                      
+Russell                   01-OCT-04 friday                                      
+Partners                  05-JAN-05 wednesday                                   
+Errazuriz                 10-MAR-05 thursday                                    
+Cambrault                 15-OCT-07 monday                                      
+Zlotkey                   29-JAN-08 tuesday                                     
+Tucker                    30-JAN-05 sunday                                      
+Bernstein                 24-MAR-05 thursday                                    
+Hall                      20-AUG-05 saturday                                    
+Olsen                     30-MAR-06 thursday                                    
+Cambrault                 09-DEC-06 saturday                                    
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Tuvault                   23-NOV-07 friday                                      
+King                      30-JAN-04 friday                                      
+Sully                     04-MAR-04 thursday                                    
+McEwen                    01-AUG-04 sunday                                      
+Smith                     10-MAR-05 thursday                                    
+Doran                     15-DEC-05 thursday                                    
+Sewall                    03-NOV-06 friday                                      
+Vishney                   11-NOV-05 friday                                      
+Greene                    19-MAR-07 monday                                      
+Marvins                   24-JAN-08 thursday                                    
+Lee                       23-FEB-08 saturday                                    
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Ande                      24-MAR-08 monday                                      
+Banda                     21-APR-08 monday                                      
+Ozer                      11-MAR-05 friday                                      
+Bloom                     23-MAR-06 thursday                                    
+Fox                       24-JAN-06 tuesday                                     
+Smith                     23-FEB-07 friday                                      
+Bates                     24-MAR-07 saturday                                    
+Kumar                     21-APR-08 monday                                      
+Abel                      11-MAY-04 tuesday                                     
+Hutton                    19-MAR-05 saturday                                    
+Taylor                    24-MAR-06 friday                                      
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Livingston                23-APR-06 sunday                                      
+Grant                     24-MAY-07 thursday                                    
+Johnson                   04-JAN-08 friday                                      
+Taylor                    24-JAN-06 tuesday                                     
+Fleaur                    23-FEB-06 thursday                                    
+Sullivan                  21-JUN-07 thursday                                    
+Geoni                     03-FEB-08 sunday                                      
+Sarchand                  27-JAN-04 tuesday                                     
+Bull                      20-FEB-05 sunday                                      
+Dellinger                 24-JUN-06 saturday                                    
+Cabrio                    07-FEB-07 wednesday                                   
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Chung                     14-JUN-05 tuesday                                     
+Dilly                     13-AUG-05 saturday                                    
+Gates                     11-JUL-06 tuesday                                     
+Perkins                   19-DEC-07 wednesday                                   
+Bell                      04-FEB-04 wednesday                                   
+Everett                   03-MAR-05 thursday                                    
+McCain                    01-JUL-06 saturday                                    
+Jones                     17-MAR-07 saturday                                    
+Walsh                     24-APR-06 monday                                      
+Feeney                    23-MAY-06 tuesday                                     
+OConnell                  21-JUN-07 thursday                                    
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Grant                     13-JAN-08 sunday                                      
+Whalen                    17-SEP-03 wednesday                                   
+Hartstein                 17-FEB-04 tuesday                                     
+Fay                       17-AUG-05 wednesday                                   
+Mavris                    07-JUN-02 friday                                      
+Baer                      07-JUN-02 friday                                      
+Higgins                   07-JUN-02 friday                                      
+Gietz                     07-JUN-02 friday                                      
+
+107 rows selected.
+
+SQL> select last_name, hire_date
+  2  , to_char(hire_date,'day')
+  3  from employees
+  4  order by 3 ;
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Rajs                      17-OCT-03 friday                                      
+Russell                   01-OCT-04 friday                                      
+Baer                      07-JUN-02 friday                                      
+Mavris                    07-JUN-02 friday                                      
+Johnson                   04-JAN-08 friday                                      
+Faviet                    16-AUG-02 friday                                      
+Sciarra                   30-SEP-05 friday                                      
+Popp                      07-DEC-07 friday                                      
+Taylor                    24-MAR-06 friday                                      
+Smith                     23-FEB-07 friday                                      
+Ozer                      11-MAR-05 friday                                      
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Vishney                   11-NOV-05 friday                                      
+Colmenares                10-AUG-07 friday                                      
+Sewall                    03-NOV-06 friday                                      
+King                      30-JAN-04 friday                                      
+Higgins                   07-JUN-02 friday                                      
+Mourgos                   16-NOV-07 friday                                      
+Tuvault                   23-NOV-07 friday                                      
+Gietz                     07-JUN-02 friday                                      
+Vollman                   10-OCT-05 monday                                      
+Ernst                     21-MAY-07 monday                                      
+Walsh                     24-APR-06 monday                                      
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Kumar                     21-APR-08 monday                                      
+Banda                     21-APR-08 monday                                      
+Ande                      24-MAR-08 monday                                      
+Greene                    19-MAR-07 monday                                      
+Cambrault                 15-OCT-07 monday                                      
+Ladwig                    14-JUL-03 monday                                      
+Mallin                    14-JUN-04 monday                                      
+Jones                     17-MAR-07 saturday                                    
+Dilly                     13-AUG-05 saturday                                    
+Rogers                    26-AUG-06 saturday                                    
+McCain                    01-JUL-06 saturday                                    
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Markle                    08-MAR-08 saturday                                    
+Davies                    29-JAN-05 saturday                                    
+Dellinger                 24-JUN-06 saturday                                    
+Greenberg                 17-AUG-02 saturday                                    
+Raphaely                  07-DEC-02 saturday                                    
+Hutton                    19-MAR-05 saturday                                    
+Austin                    25-JUN-05 saturday                                    
+Bates                     24-MAR-07 saturday                                    
+Baida                     24-DEC-05 saturday                                    
+Lee                       23-FEB-08 saturday                                    
+De Haan                   13-JAN-01 saturday                                    
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Bissot                    20-AUG-05 saturday                                    
+Hall                      20-AUG-05 saturday                                    
+Cambrault                 09-DEC-06 saturday                                    
+Nayer                     16-JUL-05 saturday                                    
+Seo                       12-FEB-06 sunday                                      
+Landry                    14-JAN-07 sunday                                      
+Grant                     13-JAN-08 sunday                                      
+Livingston                23-APR-06 sunday                                      
+Vargas                    09-JUL-06 sunday                                      
+Tobias                    24-JUL-05 sunday                                      
+Weiss                     18-JUL-04 sunday                                      
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+McEwen                    01-AUG-04 sunday                                      
+Fripp                     10-APR-05 sunday                                      
+Atkinson                  30-OCT-05 sunday                                      
+Bull                      20-FEB-05 sunday                                      
+Geoni                     03-FEB-08 sunday                                      
+Tucker                    30-JAN-05 sunday                                      
+Khoo                      18-MAY-03 sunday                                      
+Pataballa                 05-FEB-06 sunday                                      
+Kaufling                  01-MAY-03 thursday                                    
+Mikkilineni               28-SEP-06 thursday                                    
+Patel                     06-APR-06 thursday                                    
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Errazuriz                 10-MAR-05 thursday                                    
+Bernstein                 24-MAR-05 thursday                                    
+Olsen                     30-MAR-06 thursday                                    
+Sully                     04-MAR-04 thursday                                    
+Smith                     10-MAR-05 thursday                                    
+Doran                     15-DEC-05 thursday                                    
+Marvins                   24-JAN-08 thursday                                    
+Bloom                     23-MAR-06 thursday                                    
+Grant                     24-MAY-07 thursday                                    
+Fleaur                    23-FEB-06 thursday                                    
+Sullivan                  21-JUN-07 thursday                                    
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Everett                   03-MAR-05 thursday                                    
+OConnell                  21-JUN-07 thursday                                    
+Hartstein                 17-FEB-04 tuesday                                     
+Urman                     07-MAR-06 tuesday                                     
+Feeney                    23-MAY-06 tuesday                                     
+Olson                     10-APR-07 tuesday                                     
+Hunold                    03-JAN-06 tuesday                                     
+Gates                     11-JUL-06 tuesday                                     
+Zlotkey                   29-JAN-08 tuesday                                     
+King                      17-JUN-03 tuesday                                     
+Sarchand                  27-JAN-04 tuesday                                     
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Taylor                    24-JAN-06 tuesday                                     
+Abel                      11-MAY-04 tuesday                                     
+Fox                       24-JAN-06 tuesday                                     
+Chung                     14-JUN-05 tuesday                                     
+Whalen                    17-SEP-03 wednesday                                   
+Bell                      04-FEB-04 wednesday                                   
+Perkins                   19-DEC-07 wednesday                                   
+Cabrio                    07-FEB-07 wednesday                                   
+Partners                  05-JAN-05 wednesday                                   
+Matos                     15-MAR-06 wednesday                                   
+Stiles                    26-OCT-05 wednesday                                   
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Philtanker                06-FEB-08 wednesday                                   
+Gee                       12-DEC-07 wednesday                                   
+Marlow                    16-FEB-05 wednesday                                   
+Himuro                    15-NOV-06 wednesday                                   
+Chen                      28-SEP-05 wednesday                                   
+Lorentz                   07-FEB-07 wednesday                                   
+Fay                       17-AUG-05 wednesday                                   
+Kochhar                   21-SEP-05 wednesday                                   
+
+107 rows selected.
+
+SQL> select last_name, hire_date
+  2  , to_char(hire_date,'D')
+  3  from employees
+  4  order by 3 ;
+
+LAST_NAME                 HIRE_DATE T                                           
+------------------------- --------- -                                           
+Pataballa                 05-FEB-06 1                                           
+Landry                    14-JAN-07 1                                           
+Grant                     13-JAN-08 1                                           
+Tucker                    30-JAN-05 1                                           
+McEwen                    01-AUG-04 1                                           
+Fripp                     10-APR-05 1                                           
+Weiss                     18-JUL-04 1                                           
+Tobias                    24-JUL-05 1                                           
+Vargas                    09-JUL-06 1                                           
+Livingston                23-APR-06 1                                           
+Bull                      20-FEB-05 1                                           
+
+LAST_NAME                 HIRE_DATE T                                           
+------------------------- --------- -                                           
+Khoo                      18-MAY-03 1                                           
+Geoni                     03-FEB-08 1                                           
+Seo                       12-FEB-06 1                                           
+Atkinson                  30-OCT-05 1                                           
+Ernst                     21-MAY-07 2                                           
+Walsh                     24-APR-06 2                                           
+Vollman                   10-OCT-05 2                                           
+Kumar                     21-APR-08 2                                           
+Banda                     21-APR-08 2                                           
+Ande                      24-MAR-08 2                                           
+Greene                    19-MAR-07 2                                           
+
+LAST_NAME                 HIRE_DATE T                                           
+------------------------- --------- -                                           
+Cambrault                 15-OCT-07 2                                           
+Ladwig                    14-JUL-03 2                                           
+Mallin                    14-JUN-04 2                                           
+Chung                     14-JUN-05 3                                           
+Gates                     11-JUL-06 3                                           
+Fox                       24-JAN-06 3                                           
+Zlotkey                   29-JAN-08 3                                           
+Feeney                    23-MAY-06 3                                           
+Sarchand                  27-JAN-04 3                                           
+Olson                     10-APR-07 3                                           
+Urman                     07-MAR-06 3                                           
+
+LAST_NAME                 HIRE_DATE T                                           
+------------------------- --------- -                                           
+Abel                      11-MAY-04 3                                           
+Hunold                    03-JAN-06 3                                           
+King                      17-JUN-03 3                                           
+Hartstein                 17-FEB-04 3                                           
+Taylor                    24-JAN-06 3                                           
+Whalen                    17-SEP-03 4                                           
+Bell                      04-FEB-04 4                                           
+Perkins                   19-DEC-07 4                                           
+Cabrio                    07-FEB-07 4                                           
+Partners                  05-JAN-05 4                                           
+Matos                     15-MAR-06 4                                           
+
+LAST_NAME                 HIRE_DATE T                                           
+------------------------- --------- -                                           
+Stiles                    26-OCT-05 4                                           
+Philtanker                06-FEB-08 4                                           
+Gee                       12-DEC-07 4                                           
+Marlow                    16-FEB-05 4                                           
+Himuro                    15-NOV-06 4                                           
+Chen                      28-SEP-05 4                                           
+Lorentz                   07-FEB-07 4                                           
+Fay                       17-AUG-05 4                                           
+Kochhar                   21-SEP-05 4                                           
+Kaufling                  01-MAY-03 5                                           
+Mikkilineni               28-SEP-06 5                                           
+
+LAST_NAME                 HIRE_DATE T                                           
+------------------------- --------- -                                           
+Patel                     06-APR-06 5                                           
+Errazuriz                 10-MAR-05 5                                           
+Bernstein                 24-MAR-05 5                                           
+Olsen                     30-MAR-06 5                                           
+Sully                     04-MAR-04 5                                           
+Smith                     10-MAR-05 5                                           
+Doran                     15-DEC-05 5                                           
+Marvins                   24-JAN-08 5                                           
+Bloom                     23-MAR-06 5                                           
+Grant                     24-MAY-07 5                                           
+Fleaur                    23-FEB-06 5                                           
+
+LAST_NAME                 HIRE_DATE T                                           
+------------------------- --------- -                                           
+Sullivan                  21-JUN-07 5                                           
+Everett                   03-MAR-05 5                                           
+OConnell                  21-JUN-07 5                                           
+Higgins                   07-JUN-02 6                                           
+Sciarra                   30-SEP-05 6                                           
+Mavris                    07-JUN-02 6                                           
+Mourgos                   16-NOV-07 6                                           
+Russell                   01-OCT-04 6                                           
+Colmenares                10-AUG-07 6                                           
+Rajs                      17-OCT-03 6                                           
+Johnson                   04-JAN-08 6                                           
+
+LAST_NAME                 HIRE_DATE T                                           
+------------------------- --------- -                                           
+Taylor                    24-MAR-06 6                                           
+Faviet                    16-AUG-02 6                                           
+Gietz                     07-JUN-02 6                                           
+Smith                     23-FEB-07 6                                           
+Ozer                      11-MAR-05 6                                           
+Popp                      07-DEC-07 6                                           
+Vishney                   11-NOV-05 6                                           
+Sewall                    03-NOV-06 6                                           
+King                      30-JAN-04 6                                           
+Tuvault                   23-NOV-07 6                                           
+Baer                      07-JUN-02 6                                           
+
+LAST_NAME                 HIRE_DATE T                                           
+------------------------- --------- -                                           
+Jones                     17-MAR-07 7                                           
+McCain                    01-JUL-06 7                                           
+Dilly                     13-AUG-05 7                                           
+Dellinger                 24-JUN-06 7                                           
+Hutton                    19-MAR-05 7                                           
+Bates                     24-MAR-07 7                                           
+Lee                       23-FEB-08 7                                           
+Cambrault                 09-DEC-06 7                                           
+Hall                      20-AUG-05 7                                           
+Davies                    29-JAN-05 7                                           
+Rogers                    26-AUG-06 7                                           
+
+LAST_NAME                 HIRE_DATE T                                           
+------------------------- --------- -                                           
+Bissot                    20-AUG-05 7                                           
+Markle                    08-MAR-08 7                                           
+Nayer                     16-JUL-05 7                                           
+Baida                     24-DEC-05 7                                           
+Raphaely                  07-DEC-02 7                                           
+Greenberg                 17-AUG-02 7                                           
+De Haan                   13-JAN-01 7                                           
+Austin                    25-JUN-05 7                                           
+
+107 rows selected.
+
+SQL> select last_name, hire_date
+  2  , to_char(hire_date,'day')
+  3  from employees
+  4  order by (hire_date- next_day(hire_date, 'Monday'));
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Ladwig                    14-JUL-03 monday                                      
+Cambrault                 15-OCT-07 monday                                      
+Mallin                    14-JUN-04 monday                                      
+Ernst                     21-MAY-07 monday                                      
+Greene                    19-MAR-07 monday                                      
+Banda                     21-APR-08 monday                                      
+Walsh                     24-APR-06 monday                                      
+Ande                      24-MAR-08 monday                                      
+Vollman                   10-OCT-05 monday                                      
+Kumar                     21-APR-08 monday                                      
+Olson                     10-APR-07 tuesday                                     
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Urman                     07-MAR-06 tuesday                                     
+Hunold                    03-JAN-06 tuesday                                     
+King                      17-JUN-03 tuesday                                     
+Hartstein                 17-FEB-04 tuesday                                     
+Feeney                    23-MAY-06 tuesday                                     
+Gates                     11-JUL-06 tuesday                                     
+Chung                     14-JUN-05 tuesday                                     
+Sarchand                  27-JAN-04 tuesday                                     
+Taylor                    24-JAN-06 tuesday                                     
+Abel                      11-MAY-04 tuesday                                     
+Fox                       24-JAN-06 tuesday                                     
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Zlotkey                   29-JAN-08 tuesday                                     
+Whalen                    17-SEP-03 wednesday                                   
+Philtanker                06-FEB-08 wednesday                                   
+Perkins                   19-DEC-07 wednesday                                   
+Bell                      04-FEB-04 wednesday                                   
+Kochhar                   21-SEP-05 wednesday                                   
+Cabrio                    07-FEB-07 wednesday                                   
+Chen                      28-SEP-05 wednesday                                   
+Himuro                    15-NOV-06 wednesday                                   
+Marlow                    16-FEB-05 wednesday                                   
+Fay                       17-AUG-05 wednesday                                   
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Gee                       12-DEC-07 wednesday                                   
+Partners                  05-JAN-05 wednesday                                   
+Matos                     15-MAR-06 wednesday                                   
+Stiles                    26-OCT-05 wednesday                                   
+Lorentz                   07-FEB-07 wednesday                                   
+Kaufling                  01-MAY-03 thursday                                    
+Mikkilineni               28-SEP-06 thursday                                    
+Patel                     06-APR-06 thursday                                    
+Errazuriz                 10-MAR-05 thursday                                    
+Bernstein                 24-MAR-05 thursday                                    
+Olsen                     30-MAR-06 thursday                                    
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Sully                     04-MAR-04 thursday                                    
+Smith                     10-MAR-05 thursday                                    
+Doran                     15-DEC-05 thursday                                    
+Marvins                   24-JAN-08 thursday                                    
+Bloom                     23-MAR-06 thursday                                    
+Grant                     24-MAY-07 thursday                                    
+Fleaur                    23-FEB-06 thursday                                    
+Sullivan                  21-JUN-07 thursday                                    
+Everett                   03-MAR-05 thursday                                    
+OConnell                  21-JUN-07 thursday                                    
+Tuvault                   23-NOV-07 friday                                      
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Popp                      07-DEC-07 friday                                      
+Gietz                     07-JUN-02 friday                                      
+King                      30-JAN-04 friday                                      
+Russell                   01-OCT-04 friday                                      
+Sewall                    03-NOV-06 friday                                      
+Baer                      07-JUN-02 friday                                      
+Rajs                      17-OCT-03 friday                                      
+Vishney                   11-NOV-05 friday                                      
+Higgins                   07-JUN-02 friday                                      
+Ozer                      11-MAR-05 friday                                      
+Colmenares                10-AUG-07 friday                                      
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Johnson                   04-JAN-08 friday                                      
+Taylor                    24-MAR-06 friday                                      
+Mourgos                   16-NOV-07 friday                                      
+Faviet                    16-AUG-02 friday                                      
+Smith                     23-FEB-07 friday                                      
+Sciarra                   30-SEP-05 friday                                      
+Mavris                    07-JUN-02 friday                                      
+Cambrault                 09-DEC-06 saturday                                    
+Hall                      20-AUG-05 saturday                                    
+Davies                    29-JAN-05 saturday                                    
+Rogers                    26-AUG-06 saturday                                    
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Bissot                    20-AUG-05 saturday                                    
+Markle                    08-MAR-08 saturday                                    
+Nayer                     16-JUL-05 saturday                                    
+Baida                     24-DEC-05 saturday                                    
+Raphaely                  07-DEC-02 saturday                                    
+Greenberg                 17-AUG-02 saturday                                    
+De Haan                   13-JAN-01 saturday                                    
+Austin                    25-JUN-05 saturday                                    
+Jones                     17-MAR-07 saturday                                    
+McCain                    01-JUL-06 saturday                                    
+Dilly                     13-AUG-05 saturday                                    
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Dellinger                 24-JUN-06 saturday                                    
+Hutton                    19-MAR-05 saturday                                    
+Bates                     24-MAR-07 saturday                                    
+Lee                       23-FEB-08 saturday                                    
+Pataballa                 05-FEB-06 sunday                                      
+Tucker                    30-JAN-05 sunday                                      
+Livingston                23-APR-06 sunday                                      
+Weiss                     18-JUL-04 sunday                                      
+Geoni                     03-FEB-08 sunday                                      
+Bull                      20-FEB-05 sunday                                      
+Grant                     13-JAN-08 sunday                                      
+
+LAST_NAME                 HIRE_DATE TO_CHAR(H                                   
+------------------------- --------- ---------                                   
+Khoo                      18-MAY-03 sunday                                      
+Landry                    14-JAN-07 sunday                                      
+Atkinson                  30-OCT-05 sunday                                      
+Tobias                    24-JUL-05 sunday                                      
+Seo                       12-FEB-06 sunday                                      
+Vargas                    09-JUL-06 sunday                                      
+McEwen                    01-AUG-04 sunday                                      
+Fripp                     10-APR-05 sunday                                      
+
+107 rows selected.
+
+SQL> spool off;

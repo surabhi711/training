@@ -1,0 +1,307 @@
+SQL> select round(max(salary)) "Maximum", round(min(salary)) "Minimum", round(sum(salary)) "Sum", round(avg(salary)) "Average" from employees;
+
+   Maximum    Minimum        Sum    Average                                     
+---------- ---------- ---------- ----------                                     
+     24000       2100     691416       6462                                     
+
+SQL> select round(max(salary)) "Maximum", round(min(salary)) "Minimum", round(sum(salary)) "Sum", round(avg(salary)) "Average" from employees group by job_id;
+
+   Maximum    Minimum        Sum    Average                                     
+---------- ---------- ---------- ----------                                     
+      9000       4200      28800       5760                                     
+     12008      12008      12008      12008                                     
+      8300       8300       8300       8300                                     
+      8200       5800      36400       7280                                     
+     11000      11000      11000      11000                                     
+      4400       4400       4400       4400                                     
+     17000      17000      34000      17000                                     
+      4200       2500      64300       3215                                     
+      9000       6900      39600       7920                                     
+     12008      12008      12008      12008                                     
+      3100       2500      13900       2780                                     
+
+   Maximum    Minimum        Sum    Average                                     
+---------- ---------- ---------- ----------                                     
+     14000      10500      61000      12200                                     
+     13000      13000      13000      13000                                     
+     10000      10000      10000      10000                                     
+     24000      24000      24000      24000                                     
+     11500       6100     250500       8350                                     
+      6000       6000       6000       6000                                     
+      3600       2100      55700       2785                                     
+      6500       6500       6500       6500                                     
+
+19 rows selected.
+
+SQL> select job_id, count(*) from employees group by job_id;
+
+JOB_ID       COUNT(*)                                                           
+---------- ----------                                                           
+IT_PROG             5                                                           
+AC_MGR              1                                                           
+AC_ACCOUNT          1                                                           
+ST_MAN              5                                                           
+PU_MAN              1                                                           
+AD_ASST             1                                                           
+AD_VP               2                                                           
+SH_CLERK           20                                                           
+FI_ACCOUNT          5                                                           
+FI_MGR              1                                                           
+PU_CLERK            5                                                           
+
+JOB_ID       COUNT(*)                                                           
+---------- ----------                                                           
+SA_MAN              5                                                           
+MK_MAN              1                                                           
+PR_REP              1                                                           
+AD_PRES             1                                                           
+SA_REP             30                                                           
+MK_REP              1                                                           
+ST_CLERK           20                                                           
+HR_REP              1                                                           
+
+19 rows selected.
+
+SQL> select count(manager_id) "Number of Managers" from employees;
+
+Number of Managers                                                              
+------------------                                                              
+               106                                                              
+
+SQL> select (max(salary)-min(salary)) "Difference" from employees;
+
+Difference                                                                      
+----------                                                                      
+     21900                                                                      
+
+SQL> desc employees;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPLOYEE_ID                               NOT NULL NUMBER(6)
+ FIRST_NAME                                         VARCHAR2(20)
+ LAST_NAME                                 NOT NULL VARCHAR2(25)
+ EMAIL                                     NOT NULL VARCHAR2(25)
+ PHONE_NUMBER                                       VARCHAR2(20)
+ HIRE_DATE                                 NOT NULL DATE
+ JOB_ID                                    NOT NULL VARCHAR2(10)
+ SALARY                                             NUMBER(8,2)
+ COMMISSION_PCT                                     NUMBER(2,2)
+ MANAGER_ID                                         NUMBER(6)
+ DEPARTMENT_ID                                      NUMBER(4)
+
+SQL> spool off;
+SQL> select manager_id, min(salary)
+  2  from employees
+  3  where manager_id is not null
+  4  group by manager_id
+  5  order by min(salary) desc;
+
+MANAGER_ID MIN(SALARY)                                                          
+---------- -----------                                                          
+       102        9000                                                          
+       205        8300                                                          
+       146        7000                                                          
+       145        7000                                                          
+       108        6900                                                          
+       149        6200                                                          
+       147        6200                                                          
+       148        6100                                                          
+       201        6000                                                          
+       100        5800                                                          
+       101        4400                                                          
+
+MANAGER_ID MIN(SALARY)                                                          
+---------- -----------                                                          
+       103        4200                                                          
+       114        2500                                                          
+       124        2500                                                          
+       123        2500                                                          
+       120        2200                                                          
+       122        2200                                                          
+       121        2100                                                          
+
+18 rows selected.
+
+SQL> select job_id, count(*)
+  2  from employees
+  3  group by job_id;
+
+JOB_ID       COUNT(*)                                                           
+---------- ----------                                                           
+IT_PROG             5                                                           
+AC_MGR              1                                                           
+AC_ACCOUNT          1                                                           
+ST_MAN              5                                                           
+PU_MAN              1                                                           
+AD_ASST             1                                                           
+AD_VP               2                                                           
+SH_CLERK           20                                                           
+FI_ACCOUNT          5                                                           
+FI_MGR              1                                                           
+PU_CLERK            5                                                           
+
+JOB_ID       COUNT(*)                                                           
+---------- ----------                                                           
+SA_MAN              5                                                           
+MK_MAN              1                                                           
+PR_REP              1                                                           
+AD_PRES             1                                                           
+SA_REP             30                                                           
+MK_REP              1                                                           
+ST_CLERK           20                                                           
+HR_REP              1                                                           
+
+19 rows selected.
+
+SQL> select count(*) "Total"
+  2  from employee
+  3  where to_char(hire_date,yyyy) in (2007,2008,2009,2010);
+from employee
+     *
+ERROR at line 2:
+ORA-00942: table or view does not exist 
+
+
+SQL> select count(*) "Total"
+  2  from employees
+  3  where to_char(hire_date,yyyy) in (2007,2008,2009,2010);
+where to_char(hire_date,yyyy) in (2007,2008,2009,2010)
+                        *
+ERROR at line 3:
+ORA-00904: "YYYY": invalid identifier 
+
+
+SQL> select count(employee_id) "Total"
+  2  count(decode(to_char(hire_date, 'YYYY'),2009),employee_id) "2009"
+  3  count(decode(to_char(hire_date, 'YYYY'),2007),employee_id) "2007"
+  4  count(decode(to_char(hire_date, 'YYYY'),2008),employee_id) "2008"
+  5  count(decode(to_char(hire_date, 'YYYY'),2010),employee_id) "2010"
+  6  from employees;
+count(decode(to_char(hire_date, 'YYYY'),2009),employee_id) "2009"
+*
+ERROR at line 2:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> select count(employee_id) Total
+  2  count(decode(to_char(hire_date, 'YYYY'),2007),employee_id) "2007"
+  3  count(decode(to_char(hire_date, 'YYYY'),2008),employee_id) "2008"
+  4  count(decode(to_char(hire_date, 'YYYY'),2009),employee_id) "2009"
+  5  count(decode(to_char(hire_date, 'YYYY'),2010),employee_id) "2010"
+  6  from employees;
+count(decode(to_char(hire_date, 'YYYY'),2007),employee_id) "2007"
+*
+ERROR at line 2:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> select count(employee_id) "Total",
+  2  count(decode(to_char(hire_date, 'YYYY'),2007),employee_id) "2007" ,
+  3  count(decode(to_char(hire_date, 'YYYY'),2008),employee_id) "2008" ,
+  4  count(decode(to_char(hire_date, 'YYYY'),2009),employee_id) "2009" ,
+  5  count(decode(to_char(hire_date, 'YYYY'),2010),employee_id) "2010"
+  6  from employees;
+count(decode(to_char(hire_date, 'YYYY'),2007),employee_id) "2007" ,
+*
+ERROR at line 2:
+ORA-00909: invalid number of arguments 
+
+
+SQL> select count(employee_id) "Total"
+  2  count(decode(to_char(hire_date, 'YYYY'),2007,employee_id)) "2007",
+  3  count(decode(to_char(hire_date, 'YYYY'),2008,employee_id)) "2008",
+  4  count(decode(to_char(hire_date, 'YYYY'),2009,employee_id)) "2009",
+  5  count(decode(to_char(hire_date, 'YYYY'),2010,employee_id)) "2010",
+  6  from employees;
+count(decode(to_char(hire_date, 'YYYY'),2007,employee_id)) "2007",
+*
+ERROR at line 2:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> select count(employee_id) "Total",
+  2  count(decode(to_char(hire_date, 'YYYY'),2007,employee_id)) "2007",
+  3  count(decode(to_char(hire_date, 'YYYY'),2008,employee_id)) "2008",
+  4  count(decode(to_char(hire_date, 'YYYY'),2009,employee_id)) "2009",
+  5  count(decode(to_char(hire_date, 'YYYY'),2010,employee_id)) "2010"
+  6  from employees;
+
+     Total       2007       2008       2009       2010                          
+---------- ---------- ---------- ---------- ----------                          
+       107         19         11          0          0                          
+
+SQL> select job_id "Job"
+  2  sum(decode(department_id,20,salary)) "dept 20",
+  3  sum(decode(department_id,50,salary)) "dept 50",
+  4  sum(decode(department_id,80,salary)) "dept 80",
+  5  sum(decode(department_id,90,salary)) "dept 90"
+  6  from employees;
+sum(decode(department_id,20,salary)) "dept 20",
+*
+ERROR at line 2:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> select job_id "Job",
+  2  sum(decode(department_id,20,salary)) "dept 20",
+  3  sum(decode(department_id,50,salary)) "dept 50",
+  4  sum(decode(department_id,80,salary)) "dept 80",
+  5  sum(decode(department_id,90,salary)) "dept 90"
+  6  from employees;
+select job_id "Job",
+       *
+ERROR at line 1:
+ORA-00937: not a single-group group function 
+
+
+SQL> desc employees;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPLOYEE_ID                               NOT NULL NUMBER(6)
+ FIRST_NAME                                         VARCHAR2(20)
+ LAST_NAME                                 NOT NULL VARCHAR2(25)
+ EMAIL                                     NOT NULL VARCHAR2(25)
+ PHONE_NUMBER                                       VARCHAR2(20)
+ HIRE_DATE                                 NOT NULL DATE
+ JOB_ID                                    NOT NULL VARCHAR2(10)
+ SALARY                                             NUMBER(8,2)
+ COMMISSION_PCT                                     NUMBER(2,2)
+ MANAGER_ID                                         NUMBER(6)
+ DEPARTMENT_ID                                      NUMBER(4)
+
+SQL> select job_id "Job",
+  2  sum(decode(department_id,20,salary)) "dept 20",
+  3  sum(decode(department_id,50,salary)) "dept 50",
+  4  sum(decode(department_id,80,salary)) "dept 80",
+  5  sum(decode(department_id,90,salary)) "dept 90"
+  6  from employees
+  7  group by job_id;
+
+Job           dept 20    dept 50    dept 80    dept 90                          
+---------- ---------- ---------- ---------- ----------                          
+IT_PROG                                                                         
+AC_MGR                                                                          
+AC_ACCOUNT                                                                      
+ST_MAN                     36400                                                
+PU_MAN                                                                          
+AD_ASST                                                                         
+AD_VP                                            34000                          
+SH_CLERK                   64300                                                
+FI_ACCOUNT                                                                      
+FI_MGR                                                                          
+PU_CLERK                                                                        
+
+Job           dept 20    dept 50    dept 80    dept 90                          
+---------- ---------- ---------- ---------- ----------                          
+SA_MAN                                61000                                     
+MK_MAN          13000                                                           
+PR_REP                                                                          
+AD_PRES                                          24000                          
+SA_REP                               243500                                     
+MK_REP           6000                                                           
+ST_CLERK                   55700                                                
+HR_REP                                                                          
+
+19 rows selected.
+
+SQL> spool off;
